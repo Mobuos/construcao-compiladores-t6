@@ -31,7 +31,34 @@ Sexto trabalho da disciplina de Construção de Compiladores, lecionada pelo pro
 
 ## Compilação e Execução
 
-Para compilação do programa é necessária a instalação do `antlr4-python3-runtime`.
+### Compilação
+
+Para compilação do programa é necessária ter instalado no sistema o [Python 3](https://www.python.org/) e instalar `antlr4-python3-runtime`, recomendamos usar o gerenciador de pacotes do python pip.
+
+```bash
+  pip install antlr4-python3-runtime
+```
+
+### Execução
+
+Para execução do programa é necessário um arquivo de entrada, que conterá instruções para geração do comando, por exemplo:
+
+```bash
+  # Dá determinado item para um player.
+  dar_item: nome_item, quantidade?, modificadores? ->? player?;
+
+  # Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
+  teleporte: origem? ->? destino;
+
+  # Encanta o item que está na mão do determinado player.
+  encantar: encantamento, level? ->? player?
+
+  # Cria um monstro.
+  criar_monstro: nome_do_monstro, posicao?, modificadores?;
+
+  # Gerencia conquistas para determinado jogador.
+  conquista: -? nome_conquista ->? player?
+```
 
 Depois disso execute o script bash de dentro da pasta do projeto:
 
