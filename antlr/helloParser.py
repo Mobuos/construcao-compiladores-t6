@@ -67,6 +67,12 @@ class helloParser ( Parser ):
             if hasattr( listener, "exitR" ):
                 listener.exitR(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitR" ):
+                return visitor.visitR(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
