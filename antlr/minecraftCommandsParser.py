@@ -10,60 +10,79 @@ else:
 
 def serializedATN():
     return [
-        4,1,28,164,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,1,0,1,0,
-        1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,40,8,1,1,1,1,1,3,
-        1,44,8,1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2,3,2,55,8,2,1,2,1,2,
-        1,2,1,2,1,2,3,2,62,8,2,1,3,1,3,1,3,1,3,1,3,3,3,69,8,3,1,3,1,3,3,
-        3,73,8,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,3,4,82,8,4,1,4,1,4,3,4,86,8,
-        4,1,4,1,4,1,5,1,5,1,5,3,5,93,8,5,1,5,1,5,1,5,3,5,98,8,5,1,5,1,5,
-        1,6,1,6,1,6,1,6,1,6,1,6,3,6,108,8,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,
-        1,7,5,7,118,8,7,10,7,12,7,121,9,7,1,7,1,7,1,8,1,8,1,8,1,8,3,8,129,
-        8,8,1,8,1,8,1,8,3,8,134,8,8,1,9,1,9,1,9,1,9,5,9,140,8,9,10,9,12,
-        9,143,9,9,1,9,1,9,1,10,1,10,1,11,1,11,1,11,1,11,5,11,153,8,11,10,
-        11,12,11,156,9,11,1,11,1,11,1,12,1,12,3,12,162,8,12,1,12,0,0,13,
-        0,2,4,6,8,10,12,14,16,18,20,22,24,0,0,169,0,26,1,0,0,0,2,34,1,0,
-        0,0,4,61,1,0,0,0,6,63,1,0,0,0,8,76,1,0,0,0,10,89,1,0,0,0,12,107,
-        1,0,0,0,14,109,1,0,0,0,16,133,1,0,0,0,18,135,1,0,0,0,20,146,1,0,
-        0,0,22,148,1,0,0,0,24,161,1,0,0,0,26,27,5,1,0,0,27,28,5,13,0,0,28,
-        29,5,26,0,0,29,30,5,13,0,0,30,31,5,26,0,0,31,32,5,13,0,0,32,33,5,
-        2,0,0,33,1,1,0,0,0,34,35,5,17,0,0,35,36,5,25,0,0,36,39,5,11,0,0,
-        37,38,5,26,0,0,38,40,5,12,0,0,39,37,1,0,0,0,39,40,1,0,0,0,40,43,
-        1,0,0,0,41,42,5,26,0,0,42,44,3,22,11,0,43,41,1,0,0,0,43,44,1,0,0,
-        0,44,45,1,0,0,0,45,46,5,22,0,0,46,47,5,11,0,0,47,48,1,0,0,0,48,49,
-        5,27,0,0,49,3,1,0,0,0,50,51,5,18,0,0,51,54,5,25,0,0,52,53,5,11,0,
-        0,53,55,5,22,0,0,54,52,1,0,0,0,54,55,1,0,0,0,55,56,1,0,0,0,56,57,
-        5,26,0,0,57,62,5,11,0,0,58,59,3,0,0,0,59,60,5,27,0,0,60,62,1,0,0,
-        0,61,50,1,0,0,0,61,58,1,0,0,0,62,5,1,0,0,0,63,64,5,19,0,0,64,65,
-        5,25,0,0,65,68,5,11,0,0,66,67,5,26,0,0,67,69,5,12,0,0,68,66,1,0,
-        0,0,68,69,1,0,0,0,69,72,1,0,0,0,70,71,5,22,0,0,71,73,5,11,0,0,72,
-        70,1,0,0,0,72,73,1,0,0,0,73,74,1,0,0,0,74,75,5,27,0,0,75,7,1,0,0,
-        0,76,77,5,20,0,0,77,78,5,25,0,0,78,81,5,11,0,0,79,80,5,26,0,0,80,
-        82,3,0,0,0,81,79,1,0,0,0,81,82,1,0,0,0,82,85,1,0,0,0,83,84,5,26,
-        0,0,84,86,3,18,9,0,85,83,1,0,0,0,85,86,1,0,0,0,86,87,1,0,0,0,87,
-        88,5,27,0,0,88,9,1,0,0,0,89,90,5,21,0,0,90,92,5,25,0,0,91,93,5,24,
-        0,0,92,91,1,0,0,0,92,93,1,0,0,0,93,94,1,0,0,0,94,97,5,11,0,0,95,
-        96,5,22,0,0,96,98,5,11,0,0,97,95,1,0,0,0,97,98,1,0,0,0,98,99,1,0,
-        0,0,99,100,5,27,0,0,100,11,1,0,0,0,101,102,5,15,0,0,102,103,5,23,
-        0,0,103,108,3,0,0,0,104,108,5,11,0,0,105,108,3,22,11,0,106,108,3,
-        18,9,0,107,101,1,0,0,0,107,104,1,0,0,0,107,105,1,0,0,0,107,106,1,
-        0,0,0,108,13,1,0,0,0,109,110,5,3,0,0,110,111,5,25,0,0,111,112,5,
-        4,0,0,112,113,5,1,0,0,113,114,5,11,0,0,114,115,5,26,0,0,115,119,
-        5,12,0,0,116,118,5,2,0,0,117,116,1,0,0,0,118,121,1,0,0,0,119,117,
-        1,0,0,0,119,120,1,0,0,0,120,122,1,0,0,0,121,119,1,0,0,0,122,123,
-        5,5,0,0,123,15,1,0,0,0,124,129,5,6,0,0,125,126,5,7,0,0,126,127,5,
-        25,0,0,127,129,5,11,0,0,128,124,1,0,0,0,128,125,1,0,0,0,129,134,
-        1,0,0,0,130,131,5,8,0,0,131,132,5,25,0,0,132,134,5,14,0,0,133,128,
-        1,0,0,0,133,130,1,0,0,0,134,17,1,0,0,0,135,136,5,9,0,0,136,141,3,
-        20,10,0,137,138,5,26,0,0,138,140,3,20,10,0,139,137,1,0,0,0,140,143,
-        1,0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,144,1,0,0,0,143,141,
-        1,0,0,0,144,145,5,10,0,0,145,19,1,0,0,0,146,147,1,0,0,0,147,21,1,
-        0,0,0,148,149,5,9,0,0,149,154,3,24,12,0,150,151,5,26,0,0,151,153,
-        3,24,12,0,152,150,1,0,0,0,153,156,1,0,0,0,154,152,1,0,0,0,154,155,
-        1,0,0,0,155,157,1,0,0,0,156,154,1,0,0,0,157,158,5,10,0,0,158,23,
-        1,0,0,0,159,162,3,14,7,0,160,162,3,16,8,0,161,159,1,0,0,0,161,160,
-        1,0,0,0,162,25,1,0,0,0,17,39,43,54,61,68,72,81,85,92,97,107,119,
-        128,133,141,154,161
+        4,1,34,214,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
+        7,20,2,21,7,21,1,0,1,0,1,0,5,0,48,8,0,10,0,12,0,51,9,0,1,1,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,3,1,3,1,3,3,3,66,8,3,1,4,1,4,1,4,
+        1,4,1,4,1,4,3,4,74,8,4,1,5,1,5,1,5,1,5,1,5,3,5,81,8,5,1,5,1,5,3,
+        5,85,8,5,1,5,1,5,1,5,1,6,1,6,1,6,1,6,1,6,3,6,95,8,6,1,6,1,6,1,7,
+        1,7,1,7,1,7,1,7,3,7,104,8,7,1,7,1,7,3,7,108,8,7,1,8,1,8,1,8,1,8,
+        1,8,3,8,115,8,8,1,8,1,8,3,8,119,8,8,1,9,1,9,1,9,3,9,124,8,9,1,9,
+        1,9,1,9,3,9,129,8,9,1,10,1,10,1,10,1,10,1,10,1,10,3,10,137,8,10,
+        1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,5,11,147,8,11,10,11,12,11,
+        150,9,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,3,12,160,8,12,3,
+        12,162,8,12,1,13,1,13,1,14,1,14,1,14,1,14,1,14,3,14,171,8,14,1,15,
+        1,15,1,16,1,16,1,17,1,17,1,17,1,17,1,18,1,18,1,18,1,18,5,18,185,
+        8,18,10,18,12,18,188,9,18,1,18,1,18,1,19,1,19,1,19,1,19,3,19,196,
+        8,19,1,20,1,20,1,20,1,20,5,20,202,8,20,10,20,12,20,205,9,20,1,20,
+        1,20,1,21,1,21,1,21,3,21,212,8,21,1,21,0,0,22,0,2,4,6,8,10,12,14,
+        16,18,20,22,24,26,28,30,32,34,36,38,40,42,0,1,2,0,14,14,33,33,222,
+        0,49,1,0,0,0,2,52,1,0,0,0,4,60,1,0,0,0,6,65,1,0,0,0,8,73,1,0,0,0,
+        10,75,1,0,0,0,12,89,1,0,0,0,14,98,1,0,0,0,16,109,1,0,0,0,18,120,
+        1,0,0,0,20,130,1,0,0,0,22,138,1,0,0,0,24,161,1,0,0,0,26,163,1,0,
+        0,0,28,165,1,0,0,0,30,172,1,0,0,0,32,174,1,0,0,0,34,176,1,0,0,0,
+        36,180,1,0,0,0,38,195,1,0,0,0,40,197,1,0,0,0,42,211,1,0,0,0,44,45,
+        3,8,4,0,45,46,5,32,0,0,46,48,1,0,0,0,47,44,1,0,0,0,48,51,1,0,0,0,
+        49,47,1,0,0,0,49,50,1,0,0,0,50,1,1,0,0,0,51,49,1,0,0,0,52,53,5,1,
+        0,0,53,54,5,20,0,0,54,55,5,31,0,0,55,56,5,20,0,0,56,57,5,31,0,0,
+        57,58,5,20,0,0,58,59,5,2,0,0,59,3,1,0,0,0,60,61,7,0,0,0,61,5,1,0,
+        0,0,62,66,5,14,0,0,63,66,3,2,1,0,64,66,5,33,0,0,65,62,1,0,0,0,65,
+        63,1,0,0,0,65,64,1,0,0,0,66,7,1,0,0,0,67,74,3,10,5,0,68,74,3,12,
+        6,0,69,74,3,14,7,0,70,74,3,16,8,0,71,74,3,18,9,0,72,74,3,20,10,0,
+        73,67,1,0,0,0,73,68,1,0,0,0,73,69,1,0,0,0,73,70,1,0,0,0,73,71,1,
+        0,0,0,73,72,1,0,0,0,74,9,1,0,0,0,75,76,5,22,0,0,76,77,5,30,0,0,77,
+        80,5,14,0,0,78,79,5,31,0,0,79,81,5,16,0,0,80,78,1,0,0,0,80,81,1,
+        0,0,0,81,84,1,0,0,0,82,83,5,31,0,0,83,85,3,40,20,0,84,82,1,0,0,0,
+        84,85,1,0,0,0,85,86,1,0,0,0,86,87,5,27,0,0,87,88,5,14,0,0,88,11,
+        1,0,0,0,89,90,5,23,0,0,90,94,5,30,0,0,91,92,3,4,2,0,92,93,5,27,0,
+        0,93,95,1,0,0,0,94,91,1,0,0,0,94,95,1,0,0,0,95,96,1,0,0,0,96,97,
+        3,6,3,0,97,13,1,0,0,0,98,99,5,24,0,0,99,100,5,30,0,0,100,103,5,14,
+        0,0,101,102,5,31,0,0,102,104,5,16,0,0,103,101,1,0,0,0,103,104,1,
+        0,0,0,104,107,1,0,0,0,105,106,5,27,0,0,106,108,5,14,0,0,107,105,
+        1,0,0,0,107,108,1,0,0,0,108,15,1,0,0,0,109,110,5,25,0,0,110,111,
+        5,30,0,0,111,114,5,14,0,0,112,113,5,31,0,0,113,115,3,2,1,0,114,112,
+        1,0,0,0,114,115,1,0,0,0,115,118,1,0,0,0,116,117,5,31,0,0,117,119,
+        3,36,18,0,118,116,1,0,0,0,118,119,1,0,0,0,119,17,1,0,0,0,120,121,
+        5,26,0,0,121,123,5,30,0,0,122,124,5,29,0,0,123,122,1,0,0,0,123,124,
+        1,0,0,0,124,125,1,0,0,0,125,128,5,14,0,0,126,127,5,27,0,0,127,129,
+        5,14,0,0,128,126,1,0,0,0,128,129,1,0,0,0,129,19,1,0,0,0,130,131,
+        5,33,0,0,131,136,5,28,0,0,132,137,3,2,1,0,133,137,5,14,0,0,134,137,
+        3,40,20,0,135,137,3,36,18,0,136,132,1,0,0,0,136,133,1,0,0,0,136,
+        134,1,0,0,0,136,135,1,0,0,0,137,21,1,0,0,0,138,139,5,3,0,0,139,140,
+        5,30,0,0,140,141,5,4,0,0,141,142,5,1,0,0,142,143,5,14,0,0,143,144,
+        5,31,0,0,144,148,5,16,0,0,145,147,5,2,0,0,146,145,1,0,0,0,147,150,
+        1,0,0,0,148,146,1,0,0,0,148,149,1,0,0,0,149,151,1,0,0,0,150,148,
+        1,0,0,0,151,152,5,5,0,0,152,23,1,0,0,0,153,162,5,6,0,0,154,155,5,
+        7,0,0,155,156,5,30,0,0,156,159,5,14,0,0,157,158,5,31,0,0,158,160,
+        5,18,0,0,159,157,1,0,0,0,159,160,1,0,0,0,160,162,1,0,0,0,161,153,
+        1,0,0,0,161,154,1,0,0,0,162,25,1,0,0,0,163,164,5,8,0,0,164,27,1,
+        0,0,0,165,166,5,6,0,0,166,167,5,30,0,0,167,170,5,14,0,0,168,169,
+        5,31,0,0,169,171,5,18,0,0,170,168,1,0,0,0,170,171,1,0,0,0,171,29,
+        1,0,0,0,172,173,5,9,0,0,173,31,1,0,0,0,174,175,5,10,0,0,175,33,1,
+        0,0,0,176,177,5,11,0,0,177,178,5,30,0,0,178,179,5,17,0,0,179,35,
+        1,0,0,0,180,181,5,12,0,0,181,186,3,38,19,0,182,183,5,31,0,0,183,
+        185,3,38,19,0,184,182,1,0,0,0,185,188,1,0,0,0,186,184,1,0,0,0,186,
+        187,1,0,0,0,187,189,1,0,0,0,188,186,1,0,0,0,189,190,5,13,0,0,190,
+        37,1,0,0,0,191,196,3,28,14,0,192,196,3,30,15,0,193,196,3,34,17,0,
+        194,196,3,32,16,0,195,191,1,0,0,0,195,192,1,0,0,0,195,193,1,0,0,
+        0,195,194,1,0,0,0,196,39,1,0,0,0,197,198,5,12,0,0,198,203,3,42,21,
+        0,199,200,5,31,0,0,200,202,3,42,21,0,201,199,1,0,0,0,202,205,1,0,
+        0,0,203,201,1,0,0,0,203,204,1,0,0,0,204,206,1,0,0,0,205,203,1,0,
+        0,0,206,207,5,13,0,0,207,41,1,0,0,0,208,212,3,22,11,0,209,212,3,
+        24,12,0,210,212,3,26,13,0,211,208,1,0,0,0,211,209,1,0,0,0,211,210,
+        1,0,0,0,212,43,1,0,0,0,21,49,65,73,80,84,94,103,107,114,118,123,
+        128,136,148,159,161,170,186,195,203,211
     ]
 
 class minecraftCommandsParser ( Parser ):
@@ -77,38 +96,53 @@ class minecraftCommandsParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'('", "')'", "'encantamentos'", "'['", 
-                     "']'", "'nome'", "'lore'", "'cor'", "'{'", "'}'", "<INVALID>", 
+                     "']'", "'nome'", "'lore'", "'inquebravel'", "'semIA'", 
+                     "'invulneravel'", "'vida'", "'{'", "'}'", "<INVALID>", 
                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "'dar_item'", "<INVALID>", "'encantar'", 
-                     "'criar_monstro'", "'conquista'", "'->'", "'='", "'-'", 
-                     "':'", "','", "';'" ]
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'dar_item'", 
+                     "<INVALID>", "'encantar'", "'criar_monstro'", "'conquista'", 
+                     "'->'", "'='", "'-'", "':'", "','", "';'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "STRING", "NUM_INT", 
-                      "NUM_REAL", "COR_HEX", "IDENT", "COMENTARIO", "DAR_ITEM", 
-                      "TELEPORTE", "ENCANTAR", "CRIAR_MONSTRO", "CONQUISTA", 
-                      "ALVO", "ATRIBUICAO", "NEGACAO", "SEPARADOR_COMANDO", 
-                      "VIRGULA", "FIM_COMANDO", "ERRO" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "<INVALID>", "STRING", "CADEIA_N_FECHADA", 
+                      "NUM_INT", "NUM_REAL", "COR_HEX", "WS", "COORDENADA_TERMO", 
+                      "COMENTARIO", "DAR_ITEM", "TELEPORTE", "ENCANTAR", 
+                      "CRIAR_MONSTRO", "CONQUISTA", "ALVO", "ATRIBUICAO", 
+                      "NEGACAO", "SEPARADOR_COMANDO", "VIRGULA", "FIM_COMANDO", 
+                      "IDENT", "ERRO" ]
 
-    RULE_coordenadas = 0
-    RULE_cmd_dar_item = 1
-    RULE_cmd_teleporte = 2
-    RULE_cmd_encantar = 3
-    RULE_cmd_criar_monstro = 4
-    RULE_cmd_conquista = 5
-    RULE_cmd_atribuicao = 6
-    RULE_mod_encantamento = 7
-    RULE_mod_exibicao = 8
-    RULE_modificadores_monstro = 9
-    RULE_modificador_monstro = 10
-    RULE_modificadores_item = 11
-    RULE_modificador_item = 12
+    RULE_programa = 0
+    RULE_coordenadas = 1
+    RULE_origem_tp = 2
+    RULE_destino_tp = 3
+    RULE_cmd = 4
+    RULE_cmd_dar_item = 5
+    RULE_cmd_teleporte = 6
+    RULE_cmd_encantar = 7
+    RULE_cmd_criar_monstro = 8
+    RULE_cmd_conquista = 9
+    RULE_cmd_atribuicao = 10
+    RULE_mod_encantamento = 11
+    RULE_mod_exibicao = 12
+    RULE_mod_inquebravel = 13
+    RULE_mod_nome = 14
+    RULE_mod_semIA = 15
+    RULE_mod_invulneravel = 16
+    RULE_mod_vida = 17
+    RULE_modificadores_monstro = 18
+    RULE_modificador_monstro = 19
+    RULE_modificadores_item = 20
+    RULE_modificador_item = 21
 
-    ruleNames =  [ "coordenadas", "cmd_dar_item", "cmd_teleporte", "cmd_encantar", 
+    ruleNames =  [ "programa", "coordenadas", "origem_tp", "destino_tp", 
+                   "cmd", "cmd_dar_item", "cmd_teleporte", "cmd_encantar", 
                    "cmd_criar_monstro", "cmd_conquista", "cmd_atribuicao", 
-                   "mod_encantamento", "mod_exibicao", "modificadores_monstro", 
-                   "modificador_monstro", "modificadores_item", "modificador_item" ]
+                   "mod_encantamento", "mod_exibicao", "mod_inquebravel", 
+                   "mod_nome", "mod_semIA", "mod_invulneravel", "mod_vida", 
+                   "modificadores_monstro", "modificador_monstro", "modificadores_item", 
+                   "modificador_item" ]
 
     EOF = Token.EOF
     T__0=1
@@ -121,24 +155,30 @@ class minecraftCommandsParser ( Parser ):
     T__7=8
     T__8=9
     T__9=10
-    STRING=11
-    NUM_INT=12
-    NUM_REAL=13
-    COR_HEX=14
-    IDENT=15
-    COMENTARIO=16
-    DAR_ITEM=17
-    TELEPORTE=18
-    ENCANTAR=19
-    CRIAR_MONSTRO=20
-    CONQUISTA=21
-    ALVO=22
-    ATRIBUICAO=23
-    NEGACAO=24
-    SEPARADOR_COMANDO=25
-    VIRGULA=26
-    FIM_COMANDO=27
-    ERRO=28
+    T__10=11
+    T__11=12
+    T__12=13
+    STRING=14
+    CADEIA_N_FECHADA=15
+    NUM_INT=16
+    NUM_REAL=17
+    COR_HEX=18
+    WS=19
+    COORDENADA_TERMO=20
+    COMENTARIO=21
+    DAR_ITEM=22
+    TELEPORTE=23
+    ENCANTAR=24
+    CRIAR_MONSTRO=25
+    CONQUISTA=26
+    ALVO=27
+    ATRIBUICAO=28
+    NEGACAO=29
+    SEPARADOR_COMANDO=30
+    VIRGULA=31
+    FIM_COMANDO=32
+    IDENT=33
+    ERRO=34
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -149,6 +189,74 @@ class minecraftCommandsParser ( Parser ):
 
 
 
+    class ProgramaContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def cmd(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(minecraftCommandsParser.CmdContext)
+            else:
+                return self.getTypedRuleContext(minecraftCommandsParser.CmdContext,i)
+
+
+        def FIM_COMANDO(self, i:int=None):
+            if i is None:
+                return self.getTokens(minecraftCommandsParser.FIM_COMANDO)
+            else:
+                return self.getToken(minecraftCommandsParser.FIM_COMANDO, i)
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_programa
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrograma" ):
+                listener.enterPrograma(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrograma" ):
+                listener.exitPrograma(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrograma" ):
+                return visitor.visitPrograma(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def programa(self):
+
+        localctx = minecraftCommandsParser.ProgramaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 0, self.RULE_programa)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 49
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 8719958016) != 0):
+                self.state = 44
+                self.cmd()
+                self.state = 45
+                self.match(minecraftCommandsParser.FIM_COMANDO)
+                self.state = 51
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
     class CoordenadasContext(ParserRuleContext):
         __slots__ = 'parser'
 
@@ -156,11 +264,11 @@ class minecraftCommandsParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def NUM_REAL(self, i:int=None):
+        def COORDENADA_TERMO(self, i:int=None):
             if i is None:
-                return self.getTokens(minecraftCommandsParser.NUM_REAL)
+                return self.getTokens(minecraftCommandsParser.COORDENADA_TERMO)
             else:
-                return self.getToken(minecraftCommandsParser.NUM_REAL, i)
+                return self.getToken(minecraftCommandsParser.COORDENADA_TERMO, i)
 
         def VIRGULA(self, i:int=None):
             if i is None:
@@ -191,23 +299,252 @@ class minecraftCommandsParser ( Parser ):
     def coordenadas(self):
 
         localctx = minecraftCommandsParser.CoordenadasContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 0, self.RULE_coordenadas)
+        self.enterRule(localctx, 2, self.RULE_coordenadas)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 26
+            self.state = 52
             self.match(minecraftCommandsParser.T__0)
-            self.state = 27
-            self.match(minecraftCommandsParser.NUM_REAL)
-            self.state = 28
+            self.state = 53
+            self.match(minecraftCommandsParser.COORDENADA_TERMO)
+            self.state = 54
             self.match(minecraftCommandsParser.VIRGULA)
-            self.state = 29
-            self.match(minecraftCommandsParser.NUM_REAL)
-            self.state = 30
+            self.state = 55
+            self.match(minecraftCommandsParser.COORDENADA_TERMO)
+            self.state = 56
             self.match(minecraftCommandsParser.VIRGULA)
-            self.state = 31
-            self.match(minecraftCommandsParser.NUM_REAL)
-            self.state = 32
+            self.state = 57
+            self.match(minecraftCommandsParser.COORDENADA_TERMO)
+            self.state = 58
             self.match(minecraftCommandsParser.T__1)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Origem_tpContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def STRING(self):
+            return self.getToken(minecraftCommandsParser.STRING, 0)
+
+        def IDENT(self):
+            return self.getToken(minecraftCommandsParser.IDENT, 0)
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_origem_tp
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOrigem_tp" ):
+                listener.enterOrigem_tp(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOrigem_tp" ):
+                listener.exitOrigem_tp(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOrigem_tp" ):
+                return visitor.visitOrigem_tp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def origem_tp(self):
+
+        localctx = minecraftCommandsParser.Origem_tpContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_origem_tp)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 60
+            _la = self._input.LA(1)
+            if not(_la==14 or _la==33):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Destino_tpContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def STRING(self):
+            return self.getToken(minecraftCommandsParser.STRING, 0)
+
+        def coordenadas(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.CoordenadasContext,0)
+
+
+        def IDENT(self):
+            return self.getToken(minecraftCommandsParser.IDENT, 0)
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_destino_tp
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDestino_tp" ):
+                listener.enterDestino_tp(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDestino_tp" ):
+                listener.exitDestino_tp(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDestino_tp" ):
+                return visitor.visitDestino_tp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def destino_tp(self):
+
+        localctx = minecraftCommandsParser.Destino_tpContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_destino_tp)
+        try:
+            self.state = 65
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [14]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 62
+                self.match(minecraftCommandsParser.STRING)
+                pass
+            elif token in [1]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 63
+                self.coordenadas()
+                pass
+            elif token in [33]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 64
+                self.match(minecraftCommandsParser.IDENT)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class CmdContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def cmd_dar_item(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_dar_itemContext,0)
+
+
+        def cmd_teleporte(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_teleporteContext,0)
+
+
+        def cmd_encantar(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_encantarContext,0)
+
+
+        def cmd_criar_monstro(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_criar_monstroContext,0)
+
+
+        def cmd_conquista(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_conquistaContext,0)
+
+
+        def cmd_atribuicao(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Cmd_atribuicaoContext,0)
+
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_cmd
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCmd" ):
+                listener.enterCmd(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCmd" ):
+                listener.exitCmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCmd" ):
+                return visitor.visitCmd(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def cmd(self):
+
+        localctx = minecraftCommandsParser.CmdContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_cmd)
+        try:
+            self.state = 73
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [22]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 67
+                self.cmd_dar_item()
+                pass
+            elif token in [23]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 68
+                self.cmd_teleporte()
+                pass
+            elif token in [24]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 69
+                self.cmd_encantar()
+                pass
+            elif token in [25]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 70
+                self.cmd_criar_monstro()
+                pass
+            elif token in [26]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 71
+                self.cmd_conquista()
+                pass
+            elif token in [33]:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 72
+                self.cmd_atribuicao()
+                pass
+            else:
+                raise NoViableAltException(self)
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -235,9 +572,6 @@ class minecraftCommandsParser ( Parser ):
                 return self.getTokens(minecraftCommandsParser.STRING)
             else:
                 return self.getToken(minecraftCommandsParser.STRING, i)
-
-        def FIM_COMANDO(self):
-            return self.getToken(minecraftCommandsParser.FIM_COMANDO, 0)
 
         def ALVO(self):
             return self.getToken(minecraftCommandsParser.ALVO, 0)
@@ -278,42 +612,40 @@ class minecraftCommandsParser ( Parser ):
     def cmd_dar_item(self):
 
         localctx = minecraftCommandsParser.Cmd_dar_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_cmd_dar_item)
+        self.enterRule(localctx, 10, self.RULE_cmd_dar_item)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 34
+            self.state = 75
             self.match(minecraftCommandsParser.DAR_ITEM)
-            self.state = 35
+            self.state = 76
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 36
+            self.state = 77
             self.match(minecraftCommandsParser.STRING)
-            self.state = 39
+            self.state = 80
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
             if la_ == 1:
-                self.state = 37
+                self.state = 78
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 38
+                self.state = 79
                 self.match(minecraftCommandsParser.NUM_INT)
 
 
-            self.state = 43
+            self.state = 84
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==26:
-                self.state = 41
+            if _la==31:
+                self.state = 82
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 42
+                self.state = 83
                 self.modificadores_item()
 
 
-            self.state = 45
+            self.state = 86
             self.match(minecraftCommandsParser.ALVO)
-            self.state = 46
+            self.state = 87
             self.match(minecraftCommandsParser.STRING)
-            self.state = 48
-            self.match(minecraftCommandsParser.FIM_COMANDO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -336,24 +668,16 @@ class minecraftCommandsParser ( Parser ):
         def SEPARADOR_COMANDO(self):
             return self.getToken(minecraftCommandsParser.SEPARADOR_COMANDO, 0)
 
-        def VIRGULA(self):
-            return self.getToken(minecraftCommandsParser.VIRGULA, 0)
+        def destino_tp(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Destino_tpContext,0)
 
-        def STRING(self, i:int=None):
-            if i is None:
-                return self.getTokens(minecraftCommandsParser.STRING)
-            else:
-                return self.getToken(minecraftCommandsParser.STRING, i)
+
+        def origem_tp(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Origem_tpContext,0)
+
 
         def ALVO(self):
             return self.getToken(minecraftCommandsParser.ALVO, 0)
-
-        def coordenadas(self):
-            return self.getTypedRuleContext(minecraftCommandsParser.CoordenadasContext,0)
-
-
-        def FIM_COMANDO(self):
-            return self.getToken(minecraftCommandsParser.FIM_COMANDO, 0)
 
         def getRuleIndex(self):
             return minecraftCommandsParser.RULE_cmd_teleporte
@@ -378,43 +702,25 @@ class minecraftCommandsParser ( Parser ):
     def cmd_teleporte(self):
 
         localctx = minecraftCommandsParser.Cmd_teleporteContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_cmd_teleporte)
-        self._la = 0 # Token type
+        self.enterRule(localctx, 12, self.RULE_cmd_teleporte)
         try:
-            self.state = 61
+            self.enterOuterAlt(localctx, 1)
+            self.state = 89
+            self.match(minecraftCommandsParser.TELEPORTE)
+            self.state = 90
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 94
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [18]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 50
-                self.match(minecraftCommandsParser.TELEPORTE)
-                self.state = 51
-                self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-                self.state = 54
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==11:
-                    self.state = 52
-                    self.match(minecraftCommandsParser.STRING)
-                    self.state = 53
-                    self.match(minecraftCommandsParser.ALVO)
+            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            if la_ == 1:
+                self.state = 91
+                self.origem_tp()
+                self.state = 92
+                self.match(minecraftCommandsParser.ALVO)
 
 
-                self.state = 56
-                self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 57
-                self.match(minecraftCommandsParser.STRING)
-                pass
-            elif token in [1]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 58
-                self.coordenadas()
-                self.state = 59
-                self.match(minecraftCommandsParser.FIM_COMANDO)
-                pass
-            else:
-                raise NoViableAltException(self)
-
+            self.state = 96
+            self.destino_tp()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -442,9 +748,6 @@ class minecraftCommandsParser ( Parser ):
                 return self.getTokens(minecraftCommandsParser.STRING)
             else:
                 return self.getToken(minecraftCommandsParser.STRING, i)
-
-        def FIM_COMANDO(self):
-            return self.getToken(minecraftCommandsParser.FIM_COMANDO, 0)
 
         def VIRGULA(self):
             return self.getToken(minecraftCommandsParser.VIRGULA, 0)
@@ -478,38 +781,36 @@ class minecraftCommandsParser ( Parser ):
     def cmd_encantar(self):
 
         localctx = minecraftCommandsParser.Cmd_encantarContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_cmd_encantar)
+        self.enterRule(localctx, 14, self.RULE_cmd_encantar)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 63
+            self.state = 98
             self.match(minecraftCommandsParser.ENCANTAR)
-            self.state = 64
+            self.state = 99
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 65
+            self.state = 100
             self.match(minecraftCommandsParser.STRING)
-            self.state = 68
+            self.state = 103
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==26:
-                self.state = 66
+            if _la==31:
+                self.state = 101
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 67
+                self.state = 102
                 self.match(minecraftCommandsParser.NUM_INT)
 
 
-            self.state = 72
+            self.state = 107
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==22:
-                self.state = 70
+            if _la==27:
+                self.state = 105
                 self.match(minecraftCommandsParser.ALVO)
-                self.state = 71
+                self.state = 106
                 self.match(minecraftCommandsParser.STRING)
 
 
-            self.state = 74
-            self.match(minecraftCommandsParser.FIM_COMANDO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -534,9 +835,6 @@ class minecraftCommandsParser ( Parser ):
 
         def STRING(self):
             return self.getToken(minecraftCommandsParser.STRING, 0)
-
-        def FIM_COMANDO(self):
-            return self.getToken(minecraftCommandsParser.FIM_COMANDO, 0)
 
         def VIRGULA(self, i:int=None):
             if i is None:
@@ -575,38 +873,36 @@ class minecraftCommandsParser ( Parser ):
     def cmd_criar_monstro(self):
 
         localctx = minecraftCommandsParser.Cmd_criar_monstroContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_cmd_criar_monstro)
+        self.enterRule(localctx, 16, self.RULE_cmd_criar_monstro)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 76
+            self.state = 109
             self.match(minecraftCommandsParser.CRIAR_MONSTRO)
-            self.state = 77
+            self.state = 110
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 78
+            self.state = 111
             self.match(minecraftCommandsParser.STRING)
-            self.state = 81
+            self.state = 114
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
-                self.state = 79
+                self.state = 112
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 80
+                self.state = 113
                 self.coordenadas()
 
 
-            self.state = 85
+            self.state = 118
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==26:
-                self.state = 83
+            if _la==31:
+                self.state = 116
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 84
+                self.state = 117
                 self.modificadores_monstro()
 
 
-            self.state = 87
-            self.match(minecraftCommandsParser.FIM_COMANDO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -634,9 +930,6 @@ class minecraftCommandsParser ( Parser ):
                 return self.getTokens(minecraftCommandsParser.STRING)
             else:
                 return self.getToken(minecraftCommandsParser.STRING, i)
-
-        def FIM_COMANDO(self):
-            return self.getToken(minecraftCommandsParser.FIM_COMANDO, 0)
 
         def NEGACAO(self):
             return self.getToken(minecraftCommandsParser.NEGACAO, 0)
@@ -667,36 +960,34 @@ class minecraftCommandsParser ( Parser ):
     def cmd_conquista(self):
 
         localctx = minecraftCommandsParser.Cmd_conquistaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_cmd_conquista)
+        self.enterRule(localctx, 18, self.RULE_cmd_conquista)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 89
+            self.state = 120
             self.match(minecraftCommandsParser.CONQUISTA)
-            self.state = 90
+            self.state = 121
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 92
+            self.state = 123
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==24:
-                self.state = 91
+            if _la==29:
+                self.state = 122
                 self.match(minecraftCommandsParser.NEGACAO)
 
 
-            self.state = 94
+            self.state = 125
             self.match(minecraftCommandsParser.STRING)
-            self.state = 97
+            self.state = 128
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==22:
-                self.state = 95
+            if _la==27:
+                self.state = 126
                 self.match(minecraftCommandsParser.ALVO)
-                self.state = 96
+                self.state = 127
                 self.match(minecraftCommandsParser.STRING)
 
 
-            self.state = 99
-            self.match(minecraftCommandsParser.FIM_COMANDO)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -757,36 +1048,33 @@ class minecraftCommandsParser ( Parser ):
     def cmd_atribuicao(self):
 
         localctx = minecraftCommandsParser.Cmd_atribuicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_cmd_atribuicao)
+        self.enterRule(localctx, 20, self.RULE_cmd_atribuicao)
         try:
-            self.state = 107
+            self.enterOuterAlt(localctx, 1)
+            self.state = 130
+            self.match(minecraftCommandsParser.IDENT)
+            self.state = 131
+            self.match(minecraftCommandsParser.ATRIBUICAO)
+            self.state = 136
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
             if la_ == 1:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 101
-                self.match(minecraftCommandsParser.IDENT)
-                self.state = 102
-                self.match(minecraftCommandsParser.ATRIBUICAO)
-                self.state = 103
+                self.state = 132
                 self.coordenadas()
                 pass
 
             elif la_ == 2:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 104
+                self.state = 133
                 self.match(minecraftCommandsParser.STRING)
                 pass
 
             elif la_ == 3:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 105
+                self.state = 134
                 self.modificadores_item()
                 pass
 
             elif la_ == 4:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 106
+                self.state = 135
                 self.modificadores_monstro()
                 pass
 
@@ -842,35 +1130,35 @@ class minecraftCommandsParser ( Parser ):
     def mod_encantamento(self):
 
         localctx = minecraftCommandsParser.Mod_encantamentoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_mod_encantamento)
+        self.enterRule(localctx, 22, self.RULE_mod_encantamento)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 109
+            self.state = 138
             self.match(minecraftCommandsParser.T__2)
-            self.state = 110
+            self.state = 139
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 111
+            self.state = 140
             self.match(minecraftCommandsParser.T__3)
-            self.state = 112
+            self.state = 141
             self.match(minecraftCommandsParser.T__0)
-            self.state = 113
+            self.state = 142
             self.match(minecraftCommandsParser.STRING)
-            self.state = 114
+            self.state = 143
             self.match(minecraftCommandsParser.VIRGULA)
-            self.state = 115
+            self.state = 144
             self.match(minecraftCommandsParser.NUM_INT)
-            self.state = 119
+            self.state = 148
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==2:
-                self.state = 116
+                self.state = 145
                 self.match(minecraftCommandsParser.T__1)
-                self.state = 121
+                self.state = 150
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 122
+            self.state = 151
             self.match(minecraftCommandsParser.T__4)
         except RecognitionException as re:
             localctx.exception = re
@@ -893,6 +1181,9 @@ class minecraftCommandsParser ( Parser ):
 
         def STRING(self):
             return self.getToken(minecraftCommandsParser.STRING, 0)
+
+        def VIRGULA(self):
+            return self.getToken(minecraftCommandsParser.VIRGULA, 0)
 
         def COR_HEX(self):
             return self.getToken(minecraftCommandsParser.COR_HEX, 0)
@@ -920,44 +1211,297 @@ class minecraftCommandsParser ( Parser ):
     def mod_exibicao(self):
 
         localctx = minecraftCommandsParser.Mod_exibicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_mod_exibicao)
+        self.enterRule(localctx, 24, self.RULE_mod_exibicao)
         try:
-            self.state = 133
+            self.state = 161
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [6, 7]:
+            if token in [6]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 128
-                self._errHandler.sync(self)
-                token = self._input.LA(1)
-                if token in [6]:
-                    self.state = 124
-                    self.match(minecraftCommandsParser.T__5)
-                    pass
-                elif token in [7]:
-                    self.state = 125
-                    self.match(minecraftCommandsParser.T__6)
-                    self.state = 126
-                    self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-                    self.state = 127
-                    self.match(minecraftCommandsParser.STRING)
-                    pass
-                else:
-                    raise NoViableAltException(self)
-
+                self.state = 153
+                self.match(minecraftCommandsParser.T__5)
                 pass
-            elif token in [8]:
+            elif token in [7]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 130
-                self.match(minecraftCommandsParser.T__7)
-                self.state = 131
+                self.state = 154
+                self.match(minecraftCommandsParser.T__6)
+                self.state = 155
                 self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-                self.state = 132
-                self.match(minecraftCommandsParser.COR_HEX)
+                self.state = 156
+                self.match(minecraftCommandsParser.STRING)
+                self.state = 159
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
+                if la_ == 1:
+                    self.state = 157
+                    self.match(minecraftCommandsParser.VIRGULA)
+                    self.state = 158
+                    self.match(minecraftCommandsParser.COR_HEX)
+
+
                 pass
             else:
                 raise NoViableAltException(self)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Mod_inquebravelContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_mod_inquebravel
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMod_inquebravel" ):
+                listener.enterMod_inquebravel(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMod_inquebravel" ):
+                listener.exitMod_inquebravel(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMod_inquebravel" ):
+                return visitor.visitMod_inquebravel(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def mod_inquebravel(self):
+
+        localctx = minecraftCommandsParser.Mod_inquebravelContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_mod_inquebravel)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 163
+            self.match(minecraftCommandsParser.T__7)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Mod_nomeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def SEPARADOR_COMANDO(self):
+            return self.getToken(minecraftCommandsParser.SEPARADOR_COMANDO, 0)
+
+        def STRING(self):
+            return self.getToken(minecraftCommandsParser.STRING, 0)
+
+        def VIRGULA(self):
+            return self.getToken(minecraftCommandsParser.VIRGULA, 0)
+
+        def COR_HEX(self):
+            return self.getToken(minecraftCommandsParser.COR_HEX, 0)
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_mod_nome
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMod_nome" ):
+                listener.enterMod_nome(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMod_nome" ):
+                listener.exitMod_nome(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMod_nome" ):
+                return visitor.visitMod_nome(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def mod_nome(self):
+
+        localctx = minecraftCommandsParser.Mod_nomeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_mod_nome)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 165
+            self.match(minecraftCommandsParser.T__5)
+            self.state = 166
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 167
+            self.match(minecraftCommandsParser.STRING)
+            self.state = 170
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            if la_ == 1:
+                self.state = 168
+                self.match(minecraftCommandsParser.VIRGULA)
+                self.state = 169
+                self.match(minecraftCommandsParser.COR_HEX)
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Mod_semIAContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_mod_semIA
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMod_semIA" ):
+                listener.enterMod_semIA(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMod_semIA" ):
+                listener.exitMod_semIA(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMod_semIA" ):
+                return visitor.visitMod_semIA(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def mod_semIA(self):
+
+        localctx = minecraftCommandsParser.Mod_semIAContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_mod_semIA)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 172
+            self.match(minecraftCommandsParser.T__8)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Mod_invulneravelContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_mod_invulneravel
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMod_invulneravel" ):
+                listener.enterMod_invulneravel(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMod_invulneravel" ):
+                listener.exitMod_invulneravel(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMod_invulneravel" ):
+                return visitor.visitMod_invulneravel(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def mod_invulneravel(self):
+
+        localctx = minecraftCommandsParser.Mod_invulneravelContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_mod_invulneravel)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 174
+            self.match(minecraftCommandsParser.T__9)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Mod_vidaContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def SEPARADOR_COMANDO(self):
+            return self.getToken(minecraftCommandsParser.SEPARADOR_COMANDO, 0)
+
+        def NUM_REAL(self):
+            return self.getToken(minecraftCommandsParser.NUM_REAL, 0)
+
+        def getRuleIndex(self):
+            return minecraftCommandsParser.RULE_mod_vida
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterMod_vida" ):
+                listener.enterMod_vida(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitMod_vida" ):
+                listener.exitMod_vida(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMod_vida" ):
+                return visitor.visitMod_vida(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def mod_vida(self):
+
+        localctx = minecraftCommandsParser.Mod_vidaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_mod_vida)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 176
+            self.match(minecraftCommandsParser.T__10)
+            self.state = 177
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 178
+            self.match(minecraftCommandsParser.NUM_REAL)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1010,28 +1554,28 @@ class minecraftCommandsParser ( Parser ):
     def modificadores_monstro(self):
 
         localctx = minecraftCommandsParser.Modificadores_monstroContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_modificadores_monstro)
+        self.enterRule(localctx, 36, self.RULE_modificadores_monstro)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 135
-            self.match(minecraftCommandsParser.T__8)
-            self.state = 136
+            self.state = 180
+            self.match(minecraftCommandsParser.T__11)
+            self.state = 181
             self.modificador_monstro()
-            self.state = 141
+            self.state = 186
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==26:
-                self.state = 137
+            while _la==31:
+                self.state = 182
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 138
+                self.state = 183
                 self.modificador_monstro()
-                self.state = 143
+                self.state = 188
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 144
-            self.match(minecraftCommandsParser.T__9)
+            self.state = 189
+            self.match(minecraftCommandsParser.T__12)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1047,6 +1591,21 @@ class minecraftCommandsParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
+
+        def mod_nome(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Mod_nomeContext,0)
+
+
+        def mod_semIA(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Mod_semIAContext,0)
+
+
+        def mod_vida(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Mod_vidaContext,0)
+
+
+        def mod_invulneravel(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Mod_invulneravelContext,0)
 
 
         def getRuleIndex(self):
@@ -1072,9 +1631,33 @@ class minecraftCommandsParser ( Parser ):
     def modificador_monstro(self):
 
         localctx = minecraftCommandsParser.Modificador_monstroContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_modificador_monstro)
+        self.enterRule(localctx, 38, self.RULE_modificador_monstro)
         try:
-            self.enterOuterAlt(localctx, 1)
+            self.state = 195
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [6]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 191
+                self.mod_nome()
+                pass
+            elif token in [9]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 192
+                self.mod_semIA()
+                pass
+            elif token in [11]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 193
+                self.mod_vida()
+                pass
+            elif token in [10]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 194
+                self.mod_invulneravel()
+                pass
+            else:
+                raise NoViableAltException(self)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1128,28 +1711,28 @@ class minecraftCommandsParser ( Parser ):
     def modificadores_item(self):
 
         localctx = minecraftCommandsParser.Modificadores_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_modificadores_item)
+        self.enterRule(localctx, 40, self.RULE_modificadores_item)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 148
-            self.match(minecraftCommandsParser.T__8)
-            self.state = 149
+            self.state = 197
+            self.match(minecraftCommandsParser.T__11)
+            self.state = 198
             self.modificador_item()
-            self.state = 154
+            self.state = 203
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==26:
-                self.state = 150
+            while _la==31:
+                self.state = 199
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 151
+                self.state = 200
                 self.modificador_item()
-                self.state = 156
+                self.state = 205
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 157
-            self.match(minecraftCommandsParser.T__9)
+            self.state = 206
+            self.match(minecraftCommandsParser.T__12)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1172,6 +1755,10 @@ class minecraftCommandsParser ( Parser ):
 
         def mod_exibicao(self):
             return self.getTypedRuleContext(minecraftCommandsParser.Mod_exibicaoContext,0)
+
+
+        def mod_inquebravel(self):
+            return self.getTypedRuleContext(minecraftCommandsParser.Mod_inquebravelContext,0)
 
 
         def getRuleIndex(self):
@@ -1197,20 +1784,25 @@ class minecraftCommandsParser ( Parser ):
     def modificador_item(self):
 
         localctx = minecraftCommandsParser.Modificador_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_modificador_item)
+        self.enterRule(localctx, 42, self.RULE_modificador_item)
         try:
-            self.state = 161
+            self.state = 211
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [3]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 159
+                self.state = 208
                 self.mod_encantamento()
                 pass
-            elif token in [6, 7, 8]:
+            elif token in [6, 7]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 160
+                self.state = 209
                 self.mod_exibicao()
+                pass
+            elif token in [8]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 210
+                self.mod_inquebravel()
                 pass
             else:
                 raise NoViableAltException(self)

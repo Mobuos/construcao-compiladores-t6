@@ -9,8 +9,28 @@ else:
 
 class minecraftCommandsVisitor(ParseTreeVisitor):
 
+    # Visit a parse tree produced by minecraftCommandsParser#programa.
+    def visitPrograma(self, ctx:minecraftCommandsParser.ProgramaContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by minecraftCommandsParser#coordenadas.
     def visitCoordenadas(self, ctx:minecraftCommandsParser.CoordenadasContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#origem_tp.
+    def visitOrigem_tp(self, ctx:minecraftCommandsParser.Origem_tpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#destino_tp.
+    def visitDestino_tp(self, ctx:minecraftCommandsParser.Destino_tpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#cmd.
+    def visitCmd(self, ctx:minecraftCommandsParser.CmdContext):
         return self.visitChildren(ctx)
 
 
@@ -51,6 +71,31 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by minecraftCommandsParser#mod_exibicao.
     def visitMod_exibicao(self, ctx:minecraftCommandsParser.Mod_exibicaoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod_inquebravel.
+    def visitMod_inquebravel(self, ctx:minecraftCommandsParser.Mod_inquebravelContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod_nome.
+    def visitMod_nome(self, ctx:minecraftCommandsParser.Mod_nomeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod_semIA.
+    def visitMod_semIA(self, ctx:minecraftCommandsParser.Mod_semIAContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod_invulneravel.
+    def visitMod_invulneravel(self, ctx:minecraftCommandsParser.Mod_invulneravelContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod_vida.
+    def visitMod_vida(self, ctx:minecraftCommandsParser.Mod_vidaContext):
         return self.visitChildren(ctx)
 
 

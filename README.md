@@ -44,12 +44,15 @@ Para compilação do programa é necessária ter instalado no sistema o [Python 
 Para execução do programa é necessário um arquivo de entrada, que conterá instruções para geração do comando, por exemplo:
 
 ```bash
+  # Atribuição de variáveis para utilização nos comandos abaixo.
+  nomeVar = "String" | ["coordenada"] | ["modificador"];
+
   # Dá determinado item para um player.
   dar_item: nome_item, quantidade?, modificadores? ->? player?;
   # Modificadores disponíveis: Display, Enchantments, Unbreakable
 
   # Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
-  teleporte: (origem ->)?, destino;
+  teleporte: origem? ->? destino;
 
   # Encanta o item que está na mão do determinado player.
   encantar: encantamento, level? ->? player?;
@@ -70,4 +73,16 @@ Depois disso execute o script bash de dentro da pasta do projeto:
 
 O script vai gerar os arquivos do antlr e executar o programa.
 
-TODO: Testes automatizados
+### Testes
+
+Para rodar os testes utilizamos o pytest (`pip install pytest`):
+
+```bash
+  pytest testador.py
+```
+
+ou para rodar testes específicos (e.g apenas de tp, erro)
+
+```bash
+  pytest testador.py -k 'test_tp'
+```
