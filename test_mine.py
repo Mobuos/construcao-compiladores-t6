@@ -67,3 +67,16 @@ def test_erro_string_n_fechada():
     input = 'teleporte: "dini;'
     esperado = "Linha 1 11 - cadeia não fechada"
     assert InEsp(input, esperado)
+
+# Teste só pra confirmar que strings de várias linhas dão na mesma coisa
+def test_meta_string():
+    esperado2 = '/give @p minecraft:netherite_sword{display:{Name:\'[{"text":"sexmaker","color":"#FF0000"}]\',Lore:[\'{"text":"sougay dou o cool","color":"blue"}\']}}'
+    esperado = """
+    /give @p minecraft:netherite_sword{
+        display:{
+            Name:'[{"text":"sexmaker","color":"#FF0000"}]',
+            Lore:['{"text":"sougay dou o cool","color":"blue"}']
+            }
+        }
+    """.replace("\n", "").replace("    ", "")
+    assert esperado == esperado2

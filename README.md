@@ -78,11 +78,11 @@ O script vai gerar os arquivos do antlr e executar o programa.
 Para rodar os testes utilizamos o pytest (`pip install pytest`):
 
 ```bash
-  pytest testador.py
+  pytest
 ```
 
-ou para rodar testes específicos (e.g apenas de tp, erro)
+ou para rodar testes específicos (e.g apenas de tp, erro, give, etc.)
 
 ```bash
-  pytest testador.py -k 'test_tp'
+  pytest -k 'tp'
 ```
