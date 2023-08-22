@@ -1,4 +1,4 @@
-// Generated from /mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t6/antlr/hello.g4 by ANTLR 4.9.2
+// Generated from /home/recoaro/Codes/UFSCAR/2023/Compiladores/construcao-compiladores-t6/antlr/hello.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,7 +16,7 @@ public class helloParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, ID=2, WS=3;
+		T__0=1, ID=2, WS=3, NICK=4, CONQUISTAS=5;
 	public static final int
 		RULE_r = 0;
 	private static String[] makeRuleNames() {
@@ -34,7 +34,7 @@ public class helloParser extends Parser {
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, "ID", "WS"
+			null, null, "ID", "WS", "NICK", "CONQUISTAS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -120,7 +120,7 @@ public class helloParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\5\b\4\2\t\2\3\2\3"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\7\b\4\2\t\2\3\2\3"+
 		"\2\3\2\3\2\2\2\3\2\2\2\2\6\2\4\3\2\2\2\4\5\7\3\2\2\5\6\7\4\2\2\6\3\3\2"+
 		"\2\2\2";
 	public static final ATN _ATN =

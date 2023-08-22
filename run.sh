@@ -4,7 +4,7 @@
 if [ $# -lt 1 ]; then
     echo "Para executar o programa é necessário um argumento, que seja o arquivo de entrada"
 else
-    antlr4 "-Dlanguage=Python3" "-visitor" "antlr/hello.g4"
+    antlr4 "-Dlanguage=Python3" "-visitor" "antlr/minecraftCommands.g4"
 
     if [ $# -eq 1 ]; then
         python main.py $1

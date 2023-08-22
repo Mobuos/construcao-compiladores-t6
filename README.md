@@ -46,18 +46,20 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
 ```bash
   # Dá determinado item para um player.
   dar_item: nome_item, quantidade?, modificadores? ->? player?;
+  # Modificadores disponíveis: Display, Enchantments, Unbreakable
 
   # Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
-  teleporte: origem? ->? destino;
+  teleporte: (origem ->)?, destino;
 
   # Encanta o item que está na mão do determinado player.
-  encantar: encantamento, level? ->? player?
+  encantar: encantamento, level? ->? player?;
 
   # Cria um monstro.
   criar_monstro: nome_do_monstro, posicao?, modificadores?;
+  # Modificadores disponíveis: Health, NoAI, CustomName, Invulnerable
 
   # Gerencia conquistas para determinado jogador.
-  conquista: -? nome_conquista ->? player?
+  conquista: -? nome_conquista ->? player?;
 ```
 
 Depois disso execute o script bash de dentro da pasta do projeto:
