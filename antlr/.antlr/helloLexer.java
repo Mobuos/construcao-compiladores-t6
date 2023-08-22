@@ -1,4 +1,4 @@
-// Generated from /home/recoaro/Codes/UFSCAR/2023/Compiladores/construcao-compiladores-t6/antlr/hello.g4 by ANTLR 4.9.2
+// Generated from /mnt/Windows-SSD/Users/jdmdi/OneDrive/Documentos/UFSCar/2023-1/Compiladores/construcao-compiladores-t6/antlr/hello.g4 by ANTLR 4.9.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

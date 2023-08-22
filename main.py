@@ -5,6 +5,7 @@ from antlr.minecraftCommandsParser import minecraftCommandsParser
 from antlr.minecraftCommandsListener import minecraftCommandsListener
 from antlr.minecraftCommandsVisitor import minecraftCommandsVisitor
 from dicts.conquistas import conquistas
+from dicts.mobs import mobs
 from customErrorListener import CustomErrorListener
 
 
