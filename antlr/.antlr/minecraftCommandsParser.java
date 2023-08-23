@@ -17,11 +17,11 @@ public class minecraftCommandsParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, STRING=14, CADEIA_N_FECHADA=15, 
-		NUM_INT=16, NUM_REAL=17, COR_HEX=18, WS=19, COORDENADA_TERMO=20, COMENTARIO=21, 
-		DAR_ITEM=22, TELEPORTE=23, ENCANTAR=24, CRIAR_MONSTRO=25, CONQUISTA=26, 
-		ALVO=27, ATRIBUICAO=28, NEGACAO=29, SEPARADOR_COMANDO=30, VIRGULA=31, 
-		FIM_COMANDO=32, IDENT=33, ERRO=34;
+		T__9=10, T__10=11, T__11=12, STRING=13, CADEIA_N_FECHADA=14, NUM_INT=15, 
+		NUM_REAL=16, COR_HEX=17, WS=18, COORDENADA_TERMO=19, COMENTARIO=20, DAR_ITEM=21, 
+		TELEPORTE=22, ENCANTAR=23, CRIAR_MONSTRO=24, CONQUISTA=25, ALVO=26, ATRIBUICAO=27, 
+		NEGACAO=28, SEPARADOR_COMANDO=29, VIRGULA=30, FIM_COMANDO=31, IDENT=32, 
+		ERRO=33;
 	public static final int
 		RULE_programa = 0, RULE_coordenadas = 1, RULE_origem_tp = 2, RULE_destino_tp = 3, 
 		RULE_cmd = 4, RULE_cmd_dar_item = 5, RULE_cmd_teleporte = 6, RULE_cmd_encantar = 7, 
@@ -43,18 +43,17 @@ public class minecraftCommandsParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'('", "')'", "'encantamentos'", "'['", "']'", "'nome'", "'lore'", 
-			"'inquebravel'", "'semIA'", "'invulneravel'", "'vida'", "'{'", "'}'", 
-			null, null, null, null, null, null, null, null, "'dar_item'", null, "'encantar'", 
-			"'criar_monstro'", "'conquista'", "'->'", "'='", "'-'", "':'", "','", 
-			"';'"
+			null, "'('", "')'", "'encantamento'", "'+'", "'nome'", "'lore'", "'inquebravel'", 
+			"'semIA'", "'invulneravel'", "'vida'", "'{'", "'}'", null, null, null, 
+			null, null, null, null, null, "'dar_item'", null, "'encantar'", "'criar_monstro'", 
+			"'conquista'", "'->'", "'='", "'-'", "':'", "','", "';'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, "STRING", "CADEIA_N_FECHADA", "NUM_INT", "NUM_REAL", "COR_HEX", 
+			null, "STRING", "CADEIA_N_FECHADA", "NUM_INT", "NUM_REAL", "COR_HEX", 
 			"WS", "COORDENADA_TERMO", "COMENTARIO", "DAR_ITEM", "TELEPORTE", "ENCANTAR", 
 			"CRIAR_MONSTRO", "CONQUISTA", "ALVO", "ATRIBUICAO", "NEGACAO", "SEPARADOR_COMANDO", 
 			"VIRGULA", "FIM_COMANDO", "IDENT", "ERRO"
@@ -402,7 +401,6 @@ public class minecraftCommandsParser extends Parser {
 		public TerminalNode STRING(int i) {
 			return getToken(minecraftCommandsParser.STRING, i);
 		}
-		public TerminalNode ALVO() { return getToken(minecraftCommandsParser.ALVO, 0); }
 		public List<TerminalNode> VIRGULA() { return getTokens(minecraftCommandsParser.VIRGULA); }
 		public TerminalNode VIRGULA(int i) {
 			return getToken(minecraftCommandsParser.VIRGULA, i);
@@ -411,6 +409,7 @@ public class minecraftCommandsParser extends Parser {
 		public Modificadores_itemContext modificadores_item() {
 			return getRuleContext(Modificadores_itemContext.class,0);
 		}
+		public TerminalNode ALVO() { return getToken(minecraftCommandsParser.ALVO, 0); }
 		public Cmd_dar_itemContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -454,12 +453,18 @@ public class minecraftCommandsParser extends Parser {
 				}
 			}
 
-			{
-			setState(86);
-			match(ALVO);
-			setState(87);
-			match(STRING);
+			setState(88);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ALVO) {
+				{
+				setState(86);
+				match(ALVO);
+				setState(87);
+				match(STRING);
+				}
 			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -495,23 +500,23 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(89);
-			match(TELEPORTE);
 			setState(90);
+			match(TELEPORTE);
+			setState(91);
 			match(SEPARADOR_COMANDO);
-			setState(94);
+			setState(95);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
 			case 1:
 				{
-				setState(91);
-				origem_tp();
 				setState(92);
+				origem_tp();
+				setState(93);
 				match(ALVO);
 				}
 				break;
 			}
-			setState(96);
+			setState(97);
 			destino_tp();
 			}
 		}
@@ -549,32 +554,32 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(98);
-			match(ENCANTAR);
 			setState(99);
-			match(SEPARADOR_COMANDO);
+			match(ENCANTAR);
 			setState(100);
+			match(SEPARADOR_COMANDO);
+			setState(101);
 			match(STRING);
-			setState(103);
+			setState(104);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==VIRGULA) {
 				{
-				setState(101);
-				match(VIRGULA);
 				setState(102);
+				match(VIRGULA);
+				setState(103);
 				match(NUM_INT);
 				}
 			}
 
-			setState(107);
+			setState(108);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==ALVO) {
 				{
-				setState(105);
-				match(ALVO);
 				setState(106);
+				match(ALVO);
+				setState(107);
 				match(STRING);
 				}
 			}
@@ -619,32 +624,32 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(109);
-			match(CRIAR_MONSTRO);
 			setState(110);
-			match(SEPARADOR_COMANDO);
+			match(CRIAR_MONSTRO);
 			setState(111);
+			match(SEPARADOR_COMANDO);
+			setState(112);
 			match(STRING);
-			setState(114);
+			setState(115);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 			case 1:
 				{
-				setState(112);
-				match(VIRGULA);
 				setState(113);
+				match(VIRGULA);
+				setState(114);
 				coordenadas();
 				}
 				break;
 			}
-			setState(118);
+			setState(119);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==VIRGULA) {
 				{
-				setState(116);
-				match(VIRGULA);
 				setState(117);
+				match(VIRGULA);
+				setState(118);
 				modificadores_monstro();
 				}
 			}
@@ -684,30 +689,30 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(120);
-			match(CONQUISTA);
 			setState(121);
+			match(CONQUISTA);
+			setState(122);
 			match(SEPARADOR_COMANDO);
-			setState(123);
+			setState(124);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==NEGACAO) {
 				{
-				setState(122);
+				setState(123);
 				match(NEGACAO);
 				}
 			}
 
-			setState(125);
+			setState(126);
 			match(STRING);
-			setState(128);
+			setState(129);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==ALVO) {
 				{
-				setState(126);
-				match(ALVO);
 				setState(127);
+				match(ALVO);
+				setState(128);
 				match(STRING);
 				}
 			}
@@ -750,34 +755,34 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(130);
-			match(IDENT);
 			setState(131);
+			match(IDENT);
+			setState(132);
 			match(ATRIBUICAO);
-			setState(136);
+			setState(137);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
 			case 1:
 				{
-				setState(132);
+				setState(133);
 				coordenadas();
 				}
 				break;
 			case 2:
 				{
-				setState(133);
+				setState(134);
 				match(STRING);
 				}
 				break;
 			case 3:
 				{
-				setState(134);
+				setState(135);
 				modificadores_item();
 				}
 				break;
 			case 4:
 				{
-				setState(135);
+				setState(136);
 				modificadores_monstro();
 				}
 				break;
@@ -797,9 +802,18 @@ public class minecraftCommandsParser extends Parser {
 
 	public static class Mod_encantamentoContext extends ParserRuleContext {
 		public TerminalNode SEPARADOR_COMANDO() { return getToken(minecraftCommandsParser.SEPARADOR_COMANDO, 0); }
-		public TerminalNode STRING() { return getToken(minecraftCommandsParser.STRING, 0); }
-		public TerminalNode VIRGULA() { return getToken(minecraftCommandsParser.VIRGULA, 0); }
-		public TerminalNode NUM_INT() { return getToken(minecraftCommandsParser.NUM_INT, 0); }
+		public List<TerminalNode> STRING() { return getTokens(minecraftCommandsParser.STRING); }
+		public TerminalNode STRING(int i) {
+			return getToken(minecraftCommandsParser.STRING, i);
+		}
+		public List<TerminalNode> VIRGULA() { return getTokens(minecraftCommandsParser.VIRGULA); }
+		public TerminalNode VIRGULA(int i) {
+			return getToken(minecraftCommandsParser.VIRGULA, i);
+		}
+		public List<TerminalNode> NUM_INT() { return getTokens(minecraftCommandsParser.NUM_INT); }
+		public TerminalNode NUM_INT(int i) {
+			return getToken(minecraftCommandsParser.NUM_INT, i);
+		}
 		public Mod_encantamentoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -813,36 +827,36 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(138);
-			match(T__2);
 			setState(139);
-			match(SEPARADOR_COMANDO);
+			match(T__2);
 			setState(140);
-			match(T__3);
+			match(SEPARADOR_COMANDO);
 			setState(141);
-			match(T__0);
-			setState(142);
 			match(STRING);
-			setState(143);
+			setState(142);
 			match(VIRGULA);
-			setState(144);
+			setState(143);
 			match(NUM_INT);
-			setState(148);
+			setState(150);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__1) {
+			while (_la==T__3) {
 				{
 				{
+				setState(144);
+				match(T__3);
 				setState(145);
-				match(T__1);
+				match(STRING);
+				setState(146);
+				match(VIRGULA);
+				setState(147);
+				match(NUM_INT);
 				}
 				}
-				setState(150);
+				setState(152);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(151);
-			match(T__4);
 			}
 		}
 		catch (RecognitionException re) {
@@ -858,9 +872,18 @@ public class minecraftCommandsParser extends Parser {
 
 	public static class Mod_exibicaoContext extends ParserRuleContext {
 		public TerminalNode SEPARADOR_COMANDO() { return getToken(minecraftCommandsParser.SEPARADOR_COMANDO, 0); }
-		public TerminalNode STRING() { return getToken(minecraftCommandsParser.STRING, 0); }
-		public TerminalNode VIRGULA() { return getToken(minecraftCommandsParser.VIRGULA, 0); }
-		public TerminalNode COR_HEX() { return getToken(minecraftCommandsParser.COR_HEX, 0); }
+		public List<TerminalNode> STRING() { return getTokens(minecraftCommandsParser.STRING); }
+		public TerminalNode STRING(int i) {
+			return getToken(minecraftCommandsParser.STRING, i);
+		}
+		public List<TerminalNode> VIRGULA() { return getTokens(minecraftCommandsParser.VIRGULA); }
+		public TerminalNode VIRGULA(int i) {
+			return getToken(minecraftCommandsParser.VIRGULA, i);
+		}
+		public List<TerminalNode> COR_HEX() { return getTokens(minecraftCommandsParser.COR_HEX); }
+		public TerminalNode COR_HEX(int i) {
+			return getToken(minecraftCommandsParser.COR_HEX, i);
+		}
 		public Mod_exibicaoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -870,37 +893,66 @@ public class minecraftCommandsParser extends Parser {
 	public final Mod_exibicaoContext mod_exibicao() throws RecognitionException {
 		Mod_exibicaoContext _localctx = new Mod_exibicaoContext(_ctx, getState());
 		enterRule(_localctx, 24, RULE_mod_exibicao);
+		int _la;
 		try {
-			setState(161);
+			setState(172);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__5:
+			case T__4:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(153);
-				match(T__5);
+				match(T__4);
 				}
 				break;
-			case T__6:
+			case T__5:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(154);
-				match(T__6);
+				match(T__5);
 				setState(155);
 				match(SEPARADOR_COMANDO);
 				setState(156);
 				match(STRING);
 				setState(159);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
-				case 1:
+				_la = _input.LA(1);
+				if (_la==VIRGULA) {
 					{
 					setState(157);
 					match(VIRGULA);
 					setState(158);
 					match(COR_HEX);
 					}
-					break;
+				}
+
+				setState(169);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==T__3) {
+					{
+					{
+					setState(161);
+					match(T__3);
+					setState(162);
+					match(STRING);
+					setState(165);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					if (_la==VIRGULA) {
+						{
+						setState(163);
+						match(VIRGULA);
+						setState(164);
+						match(COR_HEX);
+						}
+					}
+
+					}
+					}
+					setState(171);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
 				}
 				}
 				break;
@@ -932,8 +984,8 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(163);
-			match(T__7);
+			setState(174);
+			match(T__6);
 			}
 		}
 		catch (RecognitionException re) {
@@ -961,27 +1013,28 @@ public class minecraftCommandsParser extends Parser {
 	public final Mod_nomeContext mod_nome() throws RecognitionException {
 		Mod_nomeContext _localctx = new Mod_nomeContext(_ctx, getState());
 		enterRule(_localctx, 28, RULE_mod_nome);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(165);
-			match(T__5);
-			setState(166);
+			setState(176);
+			match(T__4);
+			setState(177);
 			match(SEPARADOR_COMANDO);
-			setState(167);
+			setState(178);
 			match(STRING);
-			setState(170);
+			setState(181);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,16,_ctx) ) {
-			case 1:
+			_la = _input.LA(1);
+			if (_la==VIRGULA) {
 				{
-				setState(168);
+				setState(179);
 				match(VIRGULA);
-				setState(169);
+				setState(180);
 				match(COR_HEX);
 				}
-				break;
 			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -1008,8 +1061,8 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(172);
-			match(T__8);
+			setState(183);
+			match(T__7);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1036,8 +1089,8 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(174);
-			match(T__9);
+			setState(185);
+			match(T__8);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1066,11 +1119,11 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(176);
-			match(T__10);
-			setState(177);
+			setState(187);
+			match(T__9);
+			setState(188);
 			match(SEPARADOR_COMANDO);
-			setState(178);
+			setState(189);
 			match(NUM_REAL);
 			}
 		}
@@ -1086,15 +1139,8 @@ public class minecraftCommandsParser extends Parser {
 	}
 
 	public static class Modificadores_monstroContext extends ParserRuleContext {
-		public List<Modificador_monstroContext> modificador_monstro() {
-			return getRuleContexts(Modificador_monstroContext.class);
-		}
-		public Modificador_monstroContext modificador_monstro(int i) {
-			return getRuleContext(Modificador_monstroContext.class,i);
-		}
-		public List<TerminalNode> VIRGULA() { return getTokens(minecraftCommandsParser.VIRGULA); }
-		public TerminalNode VIRGULA(int i) {
-			return getToken(minecraftCommandsParser.VIRGULA, i);
+		public Modificador_monstroContext modificador_monstro() {
+			return getRuleContext(Modificador_monstroContext.class,0);
 		}
 		public Modificadores_monstroContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1109,28 +1155,24 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(180);
-			match(T__11);
-			setState(181);
+			setState(191);
+			match(T__10);
+			setState(192);
 			modificador_monstro();
-			setState(186);
+			setState(196);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==VIRGULA) {
+			while (_la==T__11) {
 				{
 				{
-				setState(182);
-				match(VIRGULA);
-				setState(183);
-				modificador_monstro();
+				setState(193);
+				match(T__11);
 				}
 				}
-				setState(188);
+				setState(198);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(189);
-			match(T__12);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1167,34 +1209,34 @@ public class minecraftCommandsParser extends Parser {
 		Modificador_monstroContext _localctx = new Modificador_monstroContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_modificador_monstro);
 		try {
-			setState(195);
+			setState(203);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__5:
+			case T__4:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(191);
+				setState(199);
 				mod_nome();
 				}
 				break;
-			case T__8:
+			case T__7:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(192);
+				setState(200);
 				mod_semIA();
 				}
 				break;
-			case T__10:
+			case T__9:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(193);
+				setState(201);
 				mod_vida();
 				}
 				break;
-			case T__9:
+			case T__8:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(194);
+				setState(202);
 				mod_invulneravel();
 				}
 				break;
@@ -1214,15 +1256,8 @@ public class minecraftCommandsParser extends Parser {
 	}
 
 	public static class Modificadores_itemContext extends ParserRuleContext {
-		public List<Modificador_itemContext> modificador_item() {
-			return getRuleContexts(Modificador_itemContext.class);
-		}
-		public Modificador_itemContext modificador_item(int i) {
-			return getRuleContext(Modificador_itemContext.class,i);
-		}
-		public List<TerminalNode> VIRGULA() { return getTokens(minecraftCommandsParser.VIRGULA); }
-		public TerminalNode VIRGULA(int i) {
-			return getToken(minecraftCommandsParser.VIRGULA, i);
+		public Modificador_itemContext modificador_item() {
+			return getRuleContext(Modificador_itemContext.class,0);
 		}
 		public Modificadores_itemContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1237,28 +1272,24 @@ public class minecraftCommandsParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(197);
-			match(T__11);
-			setState(198);
+			setState(205);
+			match(T__10);
+			setState(206);
 			modificador_item();
-			setState(203);
+			setState(210);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==VIRGULA) {
+			while (_la==T__11) {
 				{
 				{
-				setState(199);
-				match(VIRGULA);
-				setState(200);
-				modificador_item();
+				setState(207);
+				match(T__11);
 				}
 				}
-				setState(205);
+				setState(212);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(206);
-			match(T__12);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1292,28 +1323,28 @@ public class minecraftCommandsParser extends Parser {
 		Modificador_itemContext _localctx = new Modificador_itemContext(_ctx, getState());
 		enterRule(_localctx, 42, RULE_modificador_item);
 		try {
-			setState(211);
+			setState(216);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__2:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(208);
+				setState(213);
 				mod_encantamento();
 				}
 				break;
+			case T__4:
 			case T__5:
-			case T__6:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(209);
+				setState(214);
 				mod_exibicao();
 				}
 				break;
-			case T__7:
+			case T__6:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(210);
+				setState(215);
 				mod_inquebravel();
 				}
 				break;
@@ -1333,72 +1364,76 @@ public class minecraftCommandsParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3$\u00d8\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3#\u00dd\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\3\2\3\2\3\2\7\2\62"+
 		"\n\2\f\2\16\2\65\13\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\5\3\5"+
 		"\3\5\5\5D\n\5\3\6\3\6\3\6\3\6\3\6\3\6\5\6L\n\6\3\7\3\7\3\7\3\7\3\7\5\7"+
-		"S\n\7\3\7\3\7\5\7W\n\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\5\ba\n\b\3\b\3"+
-		"\b\3\t\3\t\3\t\3\t\3\t\5\tj\n\t\3\t\3\t\5\tn\n\t\3\n\3\n\3\n\3\n\3\n\5"+
-		"\nu\n\n\3\n\3\n\5\ny\n\n\3\13\3\13\3\13\5\13~\n\13\3\13\3\13\3\13\5\13"+
-		"\u0083\n\13\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u008b\n\f\3\r\3\r\3\r\3\r\3\r"+
-		"\3\r\3\r\3\r\7\r\u0095\n\r\f\r\16\r\u0098\13\r\3\r\3\r\3\16\3\16\3\16"+
-		"\3\16\3\16\3\16\5\16\u00a2\n\16\5\16\u00a4\n\16\3\17\3\17\3\20\3\20\3"+
-		"\20\3\20\3\20\5\20\u00ad\n\20\3\21\3\21\3\22\3\22\3\23\3\23\3\23\3\23"+
-		"\3\24\3\24\3\24\3\24\7\24\u00bb\n\24\f\24\16\24\u00be\13\24\3\24\3\24"+
-		"\3\25\3\25\3\25\3\25\5\25\u00c6\n\25\3\26\3\26\3\26\3\26\7\26\u00cc\n"+
-		"\26\f\26\16\26\u00cf\13\26\3\26\3\26\3\27\3\27\3\27\5\27\u00d6\n\27\3"+
-		"\27\2\2\30\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,\2\3\4\2\20\20"+
-		"##\2\u00e0\2\63\3\2\2\2\4\66\3\2\2\2\6>\3\2\2\2\bC\3\2\2\2\nK\3\2\2\2"+
-		"\fM\3\2\2\2\16[\3\2\2\2\20d\3\2\2\2\22o\3\2\2\2\24z\3\2\2\2\26\u0084\3"+
-		"\2\2\2\30\u008c\3\2\2\2\32\u00a3\3\2\2\2\34\u00a5\3\2\2\2\36\u00a7\3\2"+
-		"\2\2 \u00ae\3\2\2\2\"\u00b0\3\2\2\2$\u00b2\3\2\2\2&\u00b6\3\2\2\2(\u00c5"+
-		"\3\2\2\2*\u00c7\3\2\2\2,\u00d5\3\2\2\2./\5\n\6\2/\60\7\"\2\2\60\62\3\2"+
-		"\2\2\61.\3\2\2\2\62\65\3\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\64\3\3\2\2"+
-		"\2\65\63\3\2\2\2\66\67\7\3\2\2\678\7\26\2\289\7!\2\29:\7\26\2\2:;\7!\2"+
-		"\2;<\7\26\2\2<=\7\4\2\2=\5\3\2\2\2>?\t\2\2\2?\7\3\2\2\2@D\7\20\2\2AD\5"+
-		"\4\3\2BD\7#\2\2C@\3\2\2\2CA\3\2\2\2CB\3\2\2\2D\t\3\2\2\2EL\5\f\7\2FL\5"+
-		"\16\b\2GL\5\20\t\2HL\5\22\n\2IL\5\24\13\2JL\5\26\f\2KE\3\2\2\2KF\3\2\2"+
-		"\2KG\3\2\2\2KH\3\2\2\2KI\3\2\2\2KJ\3\2\2\2L\13\3\2\2\2MN\7\30\2\2NO\7"+
-		" \2\2OR\7\20\2\2PQ\7!\2\2QS\7\22\2\2RP\3\2\2\2RS\3\2\2\2SV\3\2\2\2TU\7"+
-		"!\2\2UW\5*\26\2VT\3\2\2\2VW\3\2\2\2WX\3\2\2\2XY\7\35\2\2YZ\7\20\2\2Z\r"+
-		"\3\2\2\2[\\\7\31\2\2\\`\7 \2\2]^\5\6\4\2^_\7\35\2\2_a\3\2\2\2`]\3\2\2"+
-		"\2`a\3\2\2\2ab\3\2\2\2bc\5\b\5\2c\17\3\2\2\2de\7\32\2\2ef\7 \2\2fi\7\20"+
-		"\2\2gh\7!\2\2hj\7\22\2\2ig\3\2\2\2ij\3\2\2\2jm\3\2\2\2kl\7\35\2\2ln\7"+
-		"\20\2\2mk\3\2\2\2mn\3\2\2\2n\21\3\2\2\2op\7\33\2\2pq\7 \2\2qt\7\20\2\2"+
-		"rs\7!\2\2su\5\4\3\2tr\3\2\2\2tu\3\2\2\2ux\3\2\2\2vw\7!\2\2wy\5&\24\2x"+
-		"v\3\2\2\2xy\3\2\2\2y\23\3\2\2\2z{\7\34\2\2{}\7 \2\2|~\7\37\2\2}|\3\2\2"+
-		"\2}~\3\2\2\2~\177\3\2\2\2\177\u0082\7\20\2\2\u0080\u0081\7\35\2\2\u0081"+
-		"\u0083\7\20\2\2\u0082\u0080\3\2\2\2\u0082\u0083\3\2\2\2\u0083\25\3\2\2"+
-		"\2\u0084\u0085\7#\2\2\u0085\u008a\7\36\2\2\u0086\u008b\5\4\3\2\u0087\u008b"+
-		"\7\20\2\2\u0088\u008b\5*\26\2\u0089\u008b\5&\24\2\u008a\u0086\3\2\2\2"+
-		"\u008a\u0087\3\2\2\2\u008a\u0088\3\2\2\2\u008a\u0089\3\2\2\2\u008b\27"+
-		"\3\2\2\2\u008c\u008d\7\5\2\2\u008d\u008e\7 \2\2\u008e\u008f\7\6\2\2\u008f"+
-		"\u0090\7\3\2\2\u0090\u0091\7\20\2\2\u0091\u0092\7!\2\2\u0092\u0096\7\22"+
-		"\2\2\u0093\u0095\7\4\2\2\u0094\u0093\3\2\2\2\u0095\u0098\3\2\2\2\u0096"+
-		"\u0094\3\2\2\2\u0096\u0097\3\2\2\2\u0097\u0099\3\2\2\2\u0098\u0096\3\2"+
-		"\2\2\u0099\u009a\7\7\2\2\u009a\31\3\2\2\2\u009b\u00a4\7\b\2\2\u009c\u009d"+
-		"\7\t\2\2\u009d\u009e\7 \2\2\u009e\u00a1\7\20\2\2\u009f\u00a0\7!\2\2\u00a0"+
-		"\u00a2\7\24\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\u00a4\3"+
-		"\2\2\2\u00a3\u009b\3\2\2\2\u00a3\u009c\3\2\2\2\u00a4\33\3\2\2\2\u00a5"+
-		"\u00a6\7\n\2\2\u00a6\35\3\2\2\2\u00a7\u00a8\7\b\2\2\u00a8\u00a9\7 \2\2"+
-		"\u00a9\u00ac\7\20\2\2\u00aa\u00ab\7!\2\2\u00ab\u00ad\7\24\2\2\u00ac\u00aa"+
-		"\3\2\2\2\u00ac\u00ad\3\2\2\2\u00ad\37\3\2\2\2\u00ae\u00af\7\13\2\2\u00af"+
-		"!\3\2\2\2\u00b0\u00b1\7\f\2\2\u00b1#\3\2\2\2\u00b2\u00b3\7\r\2\2\u00b3"+
-		"\u00b4\7 \2\2\u00b4\u00b5\7\23\2\2\u00b5%\3\2\2\2\u00b6\u00b7\7\16\2\2"+
-		"\u00b7\u00bc\5(\25\2\u00b8\u00b9\7!\2\2\u00b9\u00bb\5(\25\2\u00ba\u00b8"+
-		"\3\2\2\2\u00bb\u00be\3\2\2\2\u00bc\u00ba\3\2\2\2\u00bc\u00bd\3\2\2\2\u00bd"+
-		"\u00bf\3\2\2\2\u00be\u00bc\3\2\2\2\u00bf\u00c0\7\17\2\2\u00c0\'\3\2\2"+
-		"\2\u00c1\u00c6\5\36\20\2\u00c2\u00c6\5 \21\2\u00c3\u00c6\5$\23\2\u00c4"+
-		"\u00c6\5\"\22\2\u00c5\u00c1\3\2\2\2\u00c5\u00c2\3\2\2\2\u00c5\u00c3\3"+
-		"\2\2\2\u00c5\u00c4\3\2\2\2\u00c6)\3\2\2\2\u00c7\u00c8\7\16\2\2\u00c8\u00cd"+
-		"\5,\27\2\u00c9\u00ca\7!\2\2\u00ca\u00cc\5,\27\2\u00cb\u00c9\3\2\2\2\u00cc"+
-		"\u00cf\3\2\2\2\u00cd\u00cb\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce\u00d0\3\2"+
-		"\2\2\u00cf\u00cd\3\2\2\2\u00d0\u00d1\7\17\2\2\u00d1+\3\2\2\2\u00d2\u00d6"+
-		"\5\30\r\2\u00d3\u00d6\5\32\16\2\u00d4\u00d6\5\34\17\2\u00d5\u00d2\3\2"+
-		"\2\2\u00d5\u00d3\3\2\2\2\u00d5\u00d4\3\2\2\2\u00d6-\3\2\2\2\27\63CKRV"+
-		"`imtx}\u0082\u008a\u0096\u00a1\u00a3\u00ac\u00bc\u00c5\u00cd\u00d5";
+		"S\n\7\3\7\3\7\5\7W\n\7\3\7\3\7\5\7[\n\7\3\b\3\b\3\b\3\b\3\b\5\bb\n\b\3"+
+		"\b\3\b\3\t\3\t\3\t\3\t\3\t\5\tk\n\t\3\t\3\t\5\to\n\t\3\n\3\n\3\n\3\n\3"+
+		"\n\5\nv\n\n\3\n\3\n\5\nz\n\n\3\13\3\13\3\13\5\13\177\n\13\3\13\3\13\3"+
+		"\13\5\13\u0084\n\13\3\f\3\f\3\f\3\f\3\f\3\f\5\f\u008c\n\f\3\r\3\r\3\r"+
+		"\3\r\3\r\3\r\3\r\3\r\3\r\7\r\u0097\n\r\f\r\16\r\u009a\13\r\3\16\3\16\3"+
+		"\16\3\16\3\16\3\16\5\16\u00a2\n\16\3\16\3\16\3\16\3\16\5\16\u00a8\n\16"+
+		"\7\16\u00aa\n\16\f\16\16\16\u00ad\13\16\5\16\u00af\n\16\3\17\3\17\3\20"+
+		"\3\20\3\20\3\20\3\20\5\20\u00b8\n\20\3\21\3\21\3\22\3\22\3\23\3\23\3\23"+
+		"\3\23\3\24\3\24\3\24\7\24\u00c5\n\24\f\24\16\24\u00c8\13\24\3\25\3\25"+
+		"\3\25\3\25\5\25\u00ce\n\25\3\26\3\26\3\26\7\26\u00d3\n\26\f\26\16\26\u00d6"+
+		"\13\26\3\27\3\27\3\27\5\27\u00db\n\27\3\27\2\2\30\2\4\6\b\n\f\16\20\22"+
+		"\24\26\30\32\34\36 \"$&(*,\2\3\4\2\17\17\"\"\2\u00e8\2\63\3\2\2\2\4\66"+
+		"\3\2\2\2\6>\3\2\2\2\bC\3\2\2\2\nK\3\2\2\2\fM\3\2\2\2\16\\\3\2\2\2\20e"+
+		"\3\2\2\2\22p\3\2\2\2\24{\3\2\2\2\26\u0085\3\2\2\2\30\u008d\3\2\2\2\32"+
+		"\u00ae\3\2\2\2\34\u00b0\3\2\2\2\36\u00b2\3\2\2\2 \u00b9\3\2\2\2\"\u00bb"+
+		"\3\2\2\2$\u00bd\3\2\2\2&\u00c1\3\2\2\2(\u00cd\3\2\2\2*\u00cf\3\2\2\2,"+
+		"\u00da\3\2\2\2./\5\n\6\2/\60\7!\2\2\60\62\3\2\2\2\61.\3\2\2\2\62\65\3"+
+		"\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\64\3\3\2\2\2\65\63\3\2\2\2\66\67\7"+
+		"\3\2\2\678\7\25\2\289\7 \2\29:\7\25\2\2:;\7 \2\2;<\7\25\2\2<=\7\4\2\2"+
+		"=\5\3\2\2\2>?\t\2\2\2?\7\3\2\2\2@D\7\17\2\2AD\5\4\3\2BD\7\"\2\2C@\3\2"+
+		"\2\2CA\3\2\2\2CB\3\2\2\2D\t\3\2\2\2EL\5\f\7\2FL\5\16\b\2GL\5\20\t\2HL"+
+		"\5\22\n\2IL\5\24\13\2JL\5\26\f\2KE\3\2\2\2KF\3\2\2\2KG\3\2\2\2KH\3\2\2"+
+		"\2KI\3\2\2\2KJ\3\2\2\2L\13\3\2\2\2MN\7\27\2\2NO\7\37\2\2OR\7\17\2\2PQ"+
+		"\7 \2\2QS\7\21\2\2RP\3\2\2\2RS\3\2\2\2SV\3\2\2\2TU\7 \2\2UW\5*\26\2VT"+
+		"\3\2\2\2VW\3\2\2\2WZ\3\2\2\2XY\7\34\2\2Y[\7\17\2\2ZX\3\2\2\2Z[\3\2\2\2"+
+		"[\r\3\2\2\2\\]\7\30\2\2]a\7\37\2\2^_\5\6\4\2_`\7\34\2\2`b\3\2\2\2a^\3"+
+		"\2\2\2ab\3\2\2\2bc\3\2\2\2cd\5\b\5\2d\17\3\2\2\2ef\7\31\2\2fg\7\37\2\2"+
+		"gj\7\17\2\2hi\7 \2\2ik\7\21\2\2jh\3\2\2\2jk\3\2\2\2kn\3\2\2\2lm\7\34\2"+
+		"\2mo\7\17\2\2nl\3\2\2\2no\3\2\2\2o\21\3\2\2\2pq\7\32\2\2qr\7\37\2\2ru"+
+		"\7\17\2\2st\7 \2\2tv\5\4\3\2us\3\2\2\2uv\3\2\2\2vy\3\2\2\2wx\7 \2\2xz"+
+		"\5&\24\2yw\3\2\2\2yz\3\2\2\2z\23\3\2\2\2{|\7\33\2\2|~\7\37\2\2}\177\7"+
+		"\36\2\2~}\3\2\2\2~\177\3\2\2\2\177\u0080\3\2\2\2\u0080\u0083\7\17\2\2"+
+		"\u0081\u0082\7\34\2\2\u0082\u0084\7\17\2\2\u0083\u0081\3\2\2\2\u0083\u0084"+
+		"\3\2\2\2\u0084\25\3\2\2\2\u0085\u0086\7\"\2\2\u0086\u008b\7\35\2\2\u0087"+
+		"\u008c\5\4\3\2\u0088\u008c\7\17\2\2\u0089\u008c\5*\26\2\u008a\u008c\5"+
+		"&\24\2\u008b\u0087\3\2\2\2\u008b\u0088\3\2\2\2\u008b\u0089\3\2\2\2\u008b"+
+		"\u008a\3\2\2\2\u008c\27\3\2\2\2\u008d\u008e\7\5\2\2\u008e\u008f\7\37\2"+
+		"\2\u008f\u0090\7\17\2\2\u0090\u0091\7 \2\2\u0091\u0098\7\21\2\2\u0092"+
+		"\u0093\7\6\2\2\u0093\u0094\7\17\2\2\u0094\u0095\7 \2\2\u0095\u0097\7\21"+
+		"\2\2\u0096\u0092\3\2\2\2\u0097\u009a\3\2\2\2\u0098\u0096\3\2\2\2\u0098"+
+		"\u0099\3\2\2\2\u0099\31\3\2\2\2\u009a\u0098\3\2\2\2\u009b\u00af\7\7\2"+
+		"\2\u009c\u009d\7\b\2\2\u009d\u009e\7\37\2\2\u009e\u00a1\7\17\2\2\u009f"+
+		"\u00a0\7 \2\2\u00a0\u00a2\7\23\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2"+
+		"\2\2\u00a2\u00ab\3\2\2\2\u00a3\u00a4\7\6\2\2\u00a4\u00a7\7\17\2\2\u00a5"+
+		"\u00a6\7 \2\2\u00a6\u00a8\7\23\2\2\u00a7\u00a5\3\2\2\2\u00a7\u00a8\3\2"+
+		"\2\2\u00a8\u00aa\3\2\2\2\u00a9\u00a3\3\2\2\2\u00aa\u00ad\3\2\2\2\u00ab"+
+		"\u00a9\3\2\2\2\u00ab\u00ac\3\2\2\2\u00ac\u00af\3\2\2\2\u00ad\u00ab\3\2"+
+		"\2\2\u00ae\u009b\3\2\2\2\u00ae\u009c\3\2\2\2\u00af\33\3\2\2\2\u00b0\u00b1"+
+		"\7\t\2\2\u00b1\35\3\2\2\2\u00b2\u00b3\7\7\2\2\u00b3\u00b4\7\37\2\2\u00b4"+
+		"\u00b7\7\17\2\2\u00b5\u00b6\7 \2\2\u00b6\u00b8\7\23\2\2\u00b7\u00b5\3"+
+		"\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\37\3\2\2\2\u00b9\u00ba\7\n\2\2\u00ba"+
+		"!\3\2\2\2\u00bb\u00bc\7\13\2\2\u00bc#\3\2\2\2\u00bd\u00be\7\f\2\2\u00be"+
+		"\u00bf\7\37\2\2\u00bf\u00c0\7\22\2\2\u00c0%\3\2\2\2\u00c1\u00c2\7\r\2"+
+		"\2\u00c2\u00c6\5(\25\2\u00c3\u00c5\7\16\2\2\u00c4\u00c3\3\2\2\2\u00c5"+
+		"\u00c8\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c6\u00c7\3\2\2\2\u00c7\'\3\2\2\2"+
+		"\u00c8\u00c6\3\2\2\2\u00c9\u00ce\5\36\20\2\u00ca\u00ce\5 \21\2\u00cb\u00ce"+
+		"\5$\23\2\u00cc\u00ce\5\"\22\2\u00cd\u00c9\3\2\2\2\u00cd\u00ca\3\2\2\2"+
+		"\u00cd\u00cb\3\2\2\2\u00cd\u00cc\3\2\2\2\u00ce)\3\2\2\2\u00cf\u00d0\7"+
+		"\r\2\2\u00d0\u00d4\5,\27\2\u00d1\u00d3\7\16\2\2\u00d2\u00d1\3\2\2\2\u00d3"+
+		"\u00d6\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d4\u00d5\3\2\2\2\u00d5+\3\2\2\2"+
+		"\u00d6\u00d4\3\2\2\2\u00d7\u00db\5\30\r\2\u00d8\u00db\5\32\16\2\u00d9"+
+		"\u00db\5\34\17\2\u00da\u00d7\3\2\2\2\u00da\u00d8\3\2\2\2\u00da\u00d9\3"+
+		"\2\2\2\u00db-\3\2\2\2\32\63CKRVZajnuy~\u0083\u008b\u0098\u00a1\u00a7\u00ab"+
+		"\u00ae\u00b7\u00c6\u00cd\u00d4\u00da";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

@@ -54,7 +54,7 @@ cmd
     | cmd_conquista
     | cmd_atribuicao
 ;
-cmd_dar_item: DAR_ITEM ':' STRING (',' NUM_INT)? (',' modificadores_item)? ('->' STRING); 
+cmd_dar_item: DAR_ITEM ':' STRING (',' NUM_INT)? (',' modificadores_item)? ('->' STRING)?; 
 cmd_teleporte: TELEPORTE ':' (origem_tp '->')? destino_tp;
 cmd_encantar: ENCANTAR ':' STRING (',' NUM_INT)? ('->' STRING)?;
 cmd_criar_monstro: CRIAR_MONSTRO ':' STRING (',' coordenadas)? (',' modificadores_monstro)?;
@@ -63,11 +63,11 @@ cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificad
 
 // Modificador par encantamento, tendo a seguinte estrutura: 'encantamentos: [ ("Nome encantamento", nivel encantamento), ...]. 
 mod_encantamento
-    : 'encantamentos' ':' '[' '(' STRING ',' NUM_INT ')'* ']';
+    : 'encantamento' ':' STRING ',' NUM_INT ('+' STRING ',' NUM_INT )*;
 
 // Modificador de exibição, estrutura: 'nome: "Item mágico", #0000FF' ou 'lore: "Incrível item\n Feito por Votor", #0000FF'
 mod_exibicao
-    : 'nome' | 'lore' ':' STRING (',' COR_HEX)?;
+    : 'nome' | 'lore' ':' STRING (',' COR_HEX)? ('+' STRING (',' COR_HEX)?)*;
 
 // Modificador, indica que o item é inquebrável
 mod_inquebravel
@@ -90,7 +90,7 @@ mod_vida
     : 'vida' ':' NUM_REAL;
 
 // Modificadores compatíveis com monstros
-modificadores_monstro: '{' modificador_monstro (',' modificador_monstro)* '}';
+modificadores_monstro: '{' modificador_monstro '}'*;
 modificador_monstro
     : mod_nome
     | mod_semIA
@@ -99,7 +99,7 @@ modificador_monstro
     ;
 
 // Modificadores compatíveis com itens
-modificadores_item: '{' modificador_item (',' modificador_item)* '}';
+modificadores_item: '{' modificador_item '}'*;
 modificador_item
     : mod_encantamento
     | mod_exibicao
