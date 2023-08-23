@@ -43,25 +43,35 @@ Para compilação do programa é necessária ter instalado no sistema o [Python 
 
 Para execução do programa é necessário um arquivo de entrada, que conterá instruções para geração do comando, por exemplo:
 
-```bash
-  # Atribuição de variáveis para utilização nos comandos abaixo.
-  nomeVar = "String" | ["coordenada"] | ["modificador"];
+```Rust
+  // Atribuição de variáveis para utilização nos comandos abaixo.
+  nomeVar = "String" | (x, y, z) | modificador;
 
-  # Dá determinado item para um player.
+  // Exemplos de modificadores possíveis p/ mobs
+  nome = {nome: "String", #0000FF}
+  semIA = {semIA}
+  vida = {vida: 60} // Número de meio-corações
+  invulneravel = {invulneravel}
+  // Exemplos de modificadores possíveis p/ itens
+  encantamento = {encantamento: "unbreaking", 2 + "power", 3}
+  exibicao = {nome: "String", #0000FF + "outraString", #FF0000}
+  exibicao_lore = {lore: "String", #0000FF + "outraString", #FF0000}
+
+  // Dá determinado item para um player.
   dar_item: nome_item, quantidade?, modificadores? ->? player?;
-  # Modificadores disponíveis: Display, Enchantments, Unbreakable
+  // Modificadores disponíveis: Display, Enchantments, Unbreakable
 
-  # Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
+  // Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
   teleporte: origem? ->? destino;
 
-  # Encanta o item que está na mão do determinado player.
+  // Encanta o item que está na mão do determinado player.
   encantar: encantamento, level? ->? player?;
 
-  # Cria um monstro.
+  // Cria um monstro.
   criar_monstro: nome_do_monstro, posicao?, modificadores?;
-  # Modificadores disponíveis: Health, NoAI, CustomName, Invulnerable
+  // Modificadores disponíveis: Health, NoAI, CustomName, Invulnerable
 
-  # Gerencia conquistas para determinado jogador.
+  // Gerencia conquistas para determinado jogador.
   conquista: -? nome_conquista ->? player?;
 ```
 

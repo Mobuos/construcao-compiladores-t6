@@ -68,15 +68,9 @@ def test_erro_string_n_fechada():
     esperado = "Linha 1 11 - cadeia não fechada"
     assert InEsp(input, esperado)
 
-# Teste só pra confirmar que strings de várias linhas dão na mesma coisa
-def test_meta_string():
-    esperado2 = '/give @p minecraft:netherite_sword{display:{Name:\'[{"text":"sexmaker","color":"#FF0000"}]\',Lore:[\'{"text":"sougay dou o cool","color":"blue"}\']}}'
-    esperado = """
-    /give @p minecraft:netherite_sword{
-        display:{
-            Name:'[{"text":"sexmaker","color":"#FF0000"}]',
-            Lore:['{"text":"sougay dou o cool","color":"blue"}']
-            }
-        }
-    """.replace("\n", "").replace("    ", "")
-    assert esperado == esperado2
+
+def test_give_name_lore():
+    input = """dar_item: "Netherite Sword", {nome: "Espadinha", #FF0000 } {lore: "super espada", #0000FF}"""
+    esperado = """/give @p minecraft:netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#0000FF"}']}}"""
+    print(input)
+    assert InEsp(input, esperado)
