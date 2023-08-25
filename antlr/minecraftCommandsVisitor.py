@@ -19,6 +19,11 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by minecraftCommandsParser#coordenada_termo.
+    def visitCoordenada_termo(self, ctx:minecraftCommandsParser.Coordenada_termoContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by minecraftCommandsParser#origem_tp.
     def visitOrigem_tp(self, ctx:minecraftCommandsParser.Origem_tpContext):
         return self.visitChildren(ctx)

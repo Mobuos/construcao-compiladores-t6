@@ -60,7 +60,7 @@ def main(argv):
 
     arvore = parser.programa()
     semanticoUtils = AnalisadorSemanticoUtils()
-    analisadorSemantico = AnalisadorSemantico(semanticoUtils)
+    analisadorSemantico = AnalisadorSemantico()
     analisadorSemantico.visitPrograma(arvore)
 
     for erroSemantico in semanticoUtils.errosSemanticos:
