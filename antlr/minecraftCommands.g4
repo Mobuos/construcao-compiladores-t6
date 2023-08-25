@@ -9,11 +9,16 @@ STRING: '"' ~('\n' | '"')* '"';
 CADEIA_N_FECHADA : '"' ( ~('\n'|'"') )*? ';';
 NUM_INT: ('0'..'9')+;
 NUM_REAL: ('0'..'9')+ ('.' ('0'..'9')+)?;
-COR_HEX: '#' ('0'..'9' | 'A'..'F' | 'a'..'f'){6};
+COR_HEX: '#' 
+    ('0'..'9' | 'A'..'F' | 'a'..'f')
+    ('0'..'9' | 'A'..'F' | 'a'..'f')
+    ('0'..'9' | 'A'..'F' | 'a'..'f')
+    ('0'..'9' | 'A'..'F' | 'a'..'f')
+    ('0'..'9' | 'A'..'F' | 'a'..'f')
+    ('0'..'9' | 'A'..'F' | 'a'..'f');
 
 // Espaço em branco.
 WS: ( ' ' | '\t' | '\r' | '\n' ) {self.skip()};
-COORDENADA_TERMO: '~' | NUM_REAL | '~'NUM_REAL; 
 
 
 // Comentário: Comentário (Comentário)
@@ -43,7 +48,8 @@ ERRO: .;
 
 //-- SINTÁTICA --
 programa: (cmd';')*;
-coordenadas: '(' COORDENADA_TERMO ',' COORDENADA_TERMO ',' COORDENADA_TERMO ')';
+coordenadas: '(' coordenada_termo ',' coordenada_termo ',' coordenada_termo ')';
+coordenada_termo: ('~'? (NUM_REAL | NUM_INT)) | '~';
 origem_tp: STRING | IDENT;
 destino_tp: STRING | coordenadas | IDENT;
 cmd
@@ -54,20 +60,20 @@ cmd
     | cmd_conquista
     | cmd_atribuicao
 ;
-cmd_dar_item: DAR_ITEM ':' STRING (',' NUM_INT)? (',' modificadores_item)? ('->' STRING)?; 
+cmd_dar_item: DAR_ITEM ':' (STRING | IDENT) (',' NUM_INT)? (',' (modificadores_item | IDENT))? ('->' (STRING | IDENT))?; 
 cmd_teleporte: TELEPORTE ':' (origem_tp '->')? destino_tp;
-cmd_encantar: ENCANTAR ':' STRING (',' NUM_INT)? ('->' STRING)?;
-cmd_criar_monstro: CRIAR_MONSTRO ':' STRING (',' coordenadas)? (',' modificadores_monstro)?;
-cmd_conquista: CONQUISTA ':' '-'? STRING ('->' STRING)?;
-cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificadores_monstro);
+cmd_encantar: ENCANTAR ':' (STRING | IDENT) (',' NUM_INT)? ('->' (STRING | IDENT))?;
+cmd_criar_monstro: CRIAR_MONSTRO ':' (STRING | IDENT) (',' (coordenadas | IDENT))? (',' (modificadores_monstro | IDENT))?;
+cmd_conquista: CONQUISTA ':' '-'? (STRING | IDENT) ('->' (STRING | IDENT))?;
+cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificadores_monstro | COR_HEX);
 
 // Modificador par encantamento, tendo a seguinte estrutura: 'encantamentos: [ ("Nome encantamento", nivel encantamento), ...]. 
 mod_encantamento
-    : 'encantamento' ':' STRING ',' NUM_INT ('+' STRING ',' NUM_INT )*;
+    : 'encantamento' ':' (STRING | IDENT) ',' NUM_INT ('+' (STRING | IDENT) ',' NUM_INT )*;
 
 // Modificador de exibição, estrutura: 'nome: "Item mágico", #0000FF' ou 'lore: "Incrível item\n Feito por Votor", #0000FF'
 mod_exibicao
-    : 'nome' | 'lore' ':' STRING (',' COR_HEX)? ('+' STRING (',' COR_HEX)?)*;
+    : 'nome' | 'lore' ':' (STRING | IDENT) (',' (COR_HEX | IDENT))? ('+' (STRING | IDENT) (',' (COR_HEX | IDENT))?)*;
 
 // Modificador, indica que o item é inquebrável
 mod_inquebravel
@@ -75,7 +81,7 @@ mod_inquebravel
 
 // Modificador de nome, estrutura: 'nome: "Mob Mágico", #0000FF'
 mod_nome
-    : 'nome' ':' STRING (',' COR_HEX)?;
+    : 'nome' ':' (STRING | IDENT) (',' (COR_HEX | IDENT))?;
 
 // Modificador, indica que o monstro não possui IA
 mod_semIA

@@ -26,6 +26,15 @@ class minecraftCommandsListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by minecraftCommandsParser#coordenada_termo.
+    def enterCoordenada_termo(self, ctx:minecraftCommandsParser.Coordenada_termoContext):
+        pass
+
+    # Exit a parse tree produced by minecraftCommandsParser#coordenada_termo.
+    def exitCoordenada_termo(self, ctx:minecraftCommandsParser.Coordenada_termoContext):
+        pass
+
+
     # Enter a parse tree produced by minecraftCommandsParser#origem_tp.
     def enterOrigem_tp(self, ctx:minecraftCommandsParser.Origem_tpContext):
         pass
