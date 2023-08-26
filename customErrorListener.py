@@ -7,5 +7,6 @@ class CustomErrorListener(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         if not self.erroSintatico:
             tokenText = offendingSymbol.text
+            self.erroSintatico = True
 
             print(f"Linha {line} coluna {column}: Erro sintático próximo a {tokenText}")

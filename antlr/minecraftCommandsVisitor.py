@@ -9,11 +9,6 @@ else:
 
 class minecraftCommandsVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by minecraftCommandsParser#programa.
-    def visitPrograma(self, ctx:minecraftCommandsParser.ProgramaContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by minecraftCommandsParser#coordenadas.
     def visitCoordenadas(self, ctx:minecraftCommandsParser.CoordenadasContext):
         return self.visitChildren(ctx)
@@ -31,6 +26,56 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by minecraftCommandsParser#destino_tp.
     def visitDestino_tp(self, ctx:minecraftCommandsParser.Destino_tpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#player.
+    def visitPlayer(self, ctx:minecraftCommandsParser.PlayerContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#item.
+    def visitItem(self, ctx:minecraftCommandsParser.ItemContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mod.
+    def visitMod(self, ctx:minecraftCommandsParser.ModContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#encantamento_var.
+    def visitEncantamento_var(self, ctx:minecraftCommandsParser.Encantamento_varContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#mob.
+    def visitMob(self, ctx:minecraftCommandsParser.MobContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#coordenada_var.
+    def visitCoordenada_var(self, ctx:minecraftCommandsParser.Coordenada_varContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#conquista_var.
+    def visitConquista_var(self, ctx:minecraftCommandsParser.Conquista_varContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#texto.
+    def visitTexto(self, ctx:minecraftCommandsParser.TextoContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#cor.
+    def visitCor(self, ctx:minecraftCommandsParser.CorContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by minecraftCommandsParser#programa.
+    def visitPrograma(self, ctx:minecraftCommandsParser.ProgramaContext):
         return self.visitChildren(ctx)
 
 
@@ -54,8 +99,8 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by minecraftCommandsParser#cmd_criar_monstro.
-    def visitCmd_criar_monstro(self, ctx:minecraftCommandsParser.Cmd_criar_monstroContext):
+    # Visit a parse tree produced by minecraftCommandsParser#cmd_criar_mob.
+    def visitCmd_criar_mob(self, ctx:minecraftCommandsParser.Cmd_criar_mobContext):
         return self.visitChildren(ctx)
 
 
@@ -84,8 +129,8 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by minecraftCommandsParser#mod_nome.
-    def visitMod_nome(self, ctx:minecraftCommandsParser.Mod_nomeContext):
+    # Visit a parse tree produced by minecraftCommandsParser#mod_nome_mob.
+    def visitMod_nome_mob(self, ctx:minecraftCommandsParser.Mod_nome_mobContext):
         return self.visitChildren(ctx)
 
 
@@ -104,13 +149,13 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by minecraftCommandsParser#modificadores_monstro.
-    def visitModificadores_monstro(self, ctx:minecraftCommandsParser.Modificadores_monstroContext):
+    # Visit a parse tree produced by minecraftCommandsParser#modificadores_mob.
+    def visitModificadores_mob(self, ctx:minecraftCommandsParser.Modificadores_mobContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by minecraftCommandsParser#modificador_monstro.
-    def visitModificador_monstro(self, ctx:minecraftCommandsParser.Modificador_monstroContext):
+    # Visit a parse tree produced by minecraftCommandsParser#modificador_mob.
+    def visitModificador_mob(self, ctx:minecraftCommandsParser.Modificador_mobContext):
         return self.visitChildren(ctx)
 
 

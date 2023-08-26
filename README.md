@@ -50,16 +50,19 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
   // Exemplos de modificadores possíveis p/ mobs
   nome = {nome: "String", #0000FF}
   semIA = {semIA}
-  vida = {vida: 60} // Número de meio-corações
+
+  // Número de meio-corações
+  vida = {vida: 60}
   invulneravel = {invulneravel}
+
   // Exemplos de modificadores possíveis p/ itens
   encantamento = {encantamento: "unbreaking", 2 + "power", 3}
   exibicao = {nome: "String", #0000FF + "outraString", #FF0000}
   exibicao_lore = {lore: "String", #0000FF + "outraString", #FF0000}
 
   // Dá determinado item para um player.
-  dar_item: nome_item, quantidade?, modificadores? ->? player?;
   // Modificadores disponíveis: Display, Enchantments, Unbreakable
+  dar_item: nome_item, quantidade?, modificadores? ->? player?;
 
   // Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
   teleporte: origem? ->? destino;
@@ -67,8 +70,8 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
   // Encanta o item que está na mão do determinado player.
   encantar: encantamento, level? ->? player?;
 
-  // Cria um monstro.
-  criar_monstro: nome_do_monstro, posicao?, modificadores?;
+  // Cria um mob.
+  criar_mob: nome_do_mob, posicao?, modificadores?;
   // Modificadores disponíveis: Health, NoAI, CustomName, Invulnerable
 
   // Gerencia conquistas para determinado jogador.

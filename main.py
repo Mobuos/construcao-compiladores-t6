@@ -45,33 +45,35 @@ def main(argv):
         lexer = minecraftCommandsLexer(input_stream)
         tokens = CommonTokenStream(lexer)
         parser = minecraftCommandsParser(tokens)
+        customErrorListener = CustomErrorListener()
 
         parser.removeErrorListeners()
-        parser.addErrorListener(CustomErrorListener())
+        parser.addErrorListener(customErrorListener)
         parser.programa()
 
-    # *Análise Semântica*:
-    input_stream = FileStream(argv[1])
-    lexer = minecraftCommandsLexer(input_stream)
-    tokens = CommonTokenStream(lexer)
-    parser = minecraftCommandsParser(tokens)
+        if not customErrorListener.erroSintatico:
+            # *Análise Semântica*:
+            input_stream = FileStream(argv[1])
+            lexer = minecraftCommandsLexer(input_stream)
+            tokens = CommonTokenStream(lexer)
+            parser = minecraftCommandsParser(tokens)
 
-    parser.removeErrorListeners()
+            parser.removeErrorListeners()
 
-    arvore = parser.programa()
-    semanticoUtils = AnalisadorSemanticoUtils()
-    analisadorSemantico = AnalisadorSemantico()
-    analisadorSemantico.visitPrograma(arvore)
+            arvore = parser.programa()
+            semanticoUtils = AnalisadorSemanticoUtils()
+            analisadorSemantico = AnalisadorSemantico()
+            analisadorSemantico.visitPrograma(arvore)
 
-    for erroSemantico in semanticoUtils.errosSemanticos:
-        print(erroSemantico)
+            for erroSemantico in semanticoUtils.errosSemanticos:
+                print(erroSemantico)
 
-    # *Geração da saída*
-    if len(semanticoUtils.errosSemanticos) == 0:
-        pass
-        # LAGeradorC agc = new LAGeradorC()
-        # agc.visitPrograma(arvore)
-        # writer.print(agc.saida.toString())
+            # *Geração da saída*
+            if len(semanticoUtils.errosSemanticos) == 0:
+                pass
+                # LAGeradorC agc = new LAGeradorC()
+                # agc.visitPrograma(arvore)
+                # writer.print(agc.saida.toString())
 
 
 if __name__ == "__main__":
