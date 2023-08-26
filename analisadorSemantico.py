@@ -71,7 +71,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         tipoMod = Tipo.MOD_ITEM
         msgErro = "incompatibilidade de modificadores"
 
-        if ctx.modificadores_monstro() != None:
+        if ctx.modificadores_mob() != None:
             tipoMod = Tipo.MOD_MOB
 
         if ctx.IDENT() != None:
@@ -87,6 +87,20 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
             )
 
         super().visitMod(ctx)
+
+    def visitCoordenada_var(self, ctx: parser.Coordenada_varContext):
+        if ctx.IDENT() != None:
+            nomeVar = ctx.IDENT().getText()
+
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+                tipoVar = self.tabela.recuperarTipo(nomeVar)
+
+                if tipoVar != Tipo.COORDENADA:
+                    SemanticoUtils.adicionarErroSemantico(
+                        ctx.start, "incompatibilidade de tipo de variável"
+                    )
+
+        super().visitCoordenada_var(ctx)
 
     def visitPlayer(self, ctx: parser.PlayerContext):
         if ctx.IDENT() != None:
@@ -123,7 +137,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
             if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
-                if tipoVar != Tipo.STRING or tipoVar != Tipo.COORDENADA:
+                if tipoVar != Tipo.STRING and tipoVar != Tipo.COORDENADA:
                     SemanticoUtils.adicionarErroSemantico(
                         ctx.start, "incompatibilidade de tipo de variável"
                     )

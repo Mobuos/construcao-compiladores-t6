@@ -121,13 +121,13 @@ def test_erro_string_n_fechada():
 
 ### Dar Item ###
 def test_give_normal():
-    input = 'dar_item "Ender Pearl";'
+    input = 'dar_item: "Ender Pearl";'
     esperado = "/give @s minecraft:ender_pearl"
     assert InEsp(input, esperado)
 
 
 def test_give_target():
-    input = 'dar_item "Ender Pearl" -> "Mobuos";'
+    input = 'dar_item: "Ender Pearl" -> "Mobuos";'
     esperado = "/give Mobuos minecraft:ender_pearl"
     assert InEsp(input, esperado)
 
@@ -145,13 +145,13 @@ def test_give_var_target():
 
 
 def test_give_qtd():
-    input = 'dar_item "Ender Pearl", 12;'
+    input = 'dar_item: "Ender Pearl", 12;'
     esperado = "/give dini minecraft:ender_pearl 12"
     assert InEsp(input, esperado)
 
 
 def test_give_name():
-    input = 'dar_item "Ender Pearl", {nome: "Circulo"};'
+    input = 'dar_item: "Ender Pearl", {nome: "Circulo"};'
     esperado = (
         """/give @s minecraft:ender_pearl{display:{Name:'[{"text":"Circulo"}]'}}"""
     )
@@ -159,7 +159,7 @@ def test_give_name():
 
 
 def test_give_name_color():
-    input = 'dar_item "Ender Pearl", {nome: "Circulo", #FF0000};'
+    input = 'dar_item: "Ender Pearl", {nome: "Circulo", #FF0000};'
     esperado = """/give @s minecraft:ender_pearl{display:{Name:'[{"text":"Circulo","color":"#FF0000"}]'}}"""
     assert InEsp(input, esperado)
 
@@ -209,9 +209,9 @@ def test_give_name_lore_color():
 def test_give_name_lore_color():
     input = clean(
         """
-    vermelho = #FF0000
-    espadinha = {nome: "Espadinha", vermelho}
-    dar_item: "Netherite Sword", espadinha {lore: "super espada", vermelho};"""
+    vermelho = #FF0000;
+    espadinha = {nome: "Espadinha", #FF0000};
+    dar_item: "Netherite Sword", espadinha {lore: "super espada", #FF0000};"""
     )
     esperado = """/give @s minecraft:netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#FF0000"}']}}"""
     assert InEsp(input, esperado)

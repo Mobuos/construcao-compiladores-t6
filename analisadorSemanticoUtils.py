@@ -20,8 +20,7 @@ class AnalisadorSemanticoUtils:
         if isinstance(paiCtx, parser.Cmd_dar_itemContext) and tipoMod == Tipo.MOD_MOB:
             return False
         elif (
-            isinstance(paiCtx, parser.Cmd_criar_monstroContext)
-            and tipoVar == Tipo.MOD_ITEM
+            isinstance(paiCtx, parser.Cmd_criar_mobContext) and tipoVar == Tipo.MOD_ITEM
         ):
             return False
 

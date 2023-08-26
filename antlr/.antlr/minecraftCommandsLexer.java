@@ -124,7 +124,7 @@ public class minecraftCommandsLexer extends Lexer {
 		case 19:
 			WS_action((RuleContext)_localctx, actionIndex);
 			break;
-		case 19:
+		case 20:
 			COMENTARIO_action((RuleContext)_localctx, actionIndex);
 			break;
 		}

@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,34,271,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,34,270,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
@@ -20,28 +20,28 @@ def serializedATN():
         7,1,8,1,8,1,9,1,9,3,9,102,8,9,1,10,1,10,1,11,1,11,1,12,1,12,1,13,
         1,13,1,13,5,13,113,8,13,10,13,12,13,116,9,13,1,14,1,14,1,14,1,14,
         1,14,1,14,3,14,124,8,14,1,15,1,15,1,15,1,15,1,15,3,15,131,8,15,1,
-        15,1,15,3,15,135,8,15,1,15,1,15,3,15,139,8,15,1,16,1,16,1,16,1,16,
-        1,16,3,16,146,8,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,3,17,155,8,
-        17,1,17,1,17,3,17,159,8,17,1,18,1,18,1,18,1,18,1,18,3,18,166,8,18,
-        1,18,1,18,3,18,170,8,18,1,19,1,19,1,19,3,19,175,8,19,1,19,1,19,1,
-        19,3,19,180,8,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,189,8,20,
-        1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,5,21,201,8,21,
-        10,21,12,21,204,9,21,1,22,1,22,1,22,1,22,1,22,1,22,3,22,212,8,22,
-        1,22,1,22,1,22,1,22,3,22,218,8,22,5,22,220,8,22,10,22,12,22,223,
-        9,22,3,22,225,8,22,1,23,1,23,1,24,1,24,1,24,1,24,1,24,3,24,234,8,
-        24,1,25,1,25,1,26,1,26,1,27,1,27,1,27,1,27,1,28,1,28,1,28,5,28,247,
-        8,28,10,28,12,28,250,9,28,1,29,1,29,1,29,1,29,3,29,256,8,29,1,30,
-        1,30,1,30,5,30,261,8,30,10,30,12,30,264,9,30,1,31,1,31,1,31,3,31,
-        269,8,31,1,31,0,0,32,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
-        32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,0,3,1,0,17,18,2,
-        0,15,15,33,33,2,0,19,19,33,33,278,0,64,1,0,0,0,2,77,1,0,0,0,4,79,
+        15,1,15,5,15,135,8,15,10,15,12,15,138,9,15,3,15,140,8,15,1,15,1,
+        15,3,15,144,8,15,1,16,1,16,1,16,1,16,1,16,3,16,151,8,16,1,16,1,16,
+        1,17,1,17,1,17,1,17,1,17,3,17,160,8,17,1,17,1,17,3,17,164,8,17,1,
+        18,1,18,1,18,1,18,1,18,3,18,171,8,18,1,18,1,18,5,18,175,8,18,10,
+        18,12,18,178,9,18,3,18,180,8,18,1,19,1,19,1,19,3,19,185,8,19,1,19,
+        1,19,1,19,3,19,190,8,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,
+        199,8,20,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,1,21,5,21,
+        211,8,21,10,21,12,21,214,9,21,1,22,1,22,1,22,1,22,1,22,3,22,221,
+        8,22,1,22,1,22,1,22,1,22,3,22,227,8,22,5,22,229,8,22,10,22,12,22,
+        232,9,22,1,23,1,23,1,24,1,24,1,24,1,24,1,24,3,24,241,8,24,1,25,1,
+        25,1,26,1,26,1,27,1,27,1,27,1,27,1,28,1,28,1,28,1,28,1,29,1,29,1,
+        29,1,29,3,29,259,8,29,1,30,1,30,1,30,1,30,1,31,1,31,1,31,3,31,268,
+        8,31,1,31,0,0,32,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,
+        36,38,40,42,44,46,48,50,52,54,56,58,60,62,0,4,1,0,17,18,2,0,15,15,
+        33,33,2,0,19,19,33,33,1,0,6,7,276,0,64,1,0,0,0,2,77,1,0,0,0,4,79,
         1,0,0,0,6,84,1,0,0,0,8,86,1,0,0,0,10,88,1,0,0,0,12,93,1,0,0,0,14,
         95,1,0,0,0,16,97,1,0,0,0,18,101,1,0,0,0,20,103,1,0,0,0,22,105,1,
         0,0,0,24,107,1,0,0,0,26,114,1,0,0,0,28,123,1,0,0,0,30,125,1,0,0,
-        0,32,140,1,0,0,0,34,149,1,0,0,0,36,160,1,0,0,0,38,171,1,0,0,0,40,
-        181,1,0,0,0,42,190,1,0,0,0,44,224,1,0,0,0,46,226,1,0,0,0,48,228,
-        1,0,0,0,50,235,1,0,0,0,52,237,1,0,0,0,54,239,1,0,0,0,56,243,1,0,
-        0,0,58,255,1,0,0,0,60,257,1,0,0,0,62,268,1,0,0,0,64,65,5,1,0,0,65,
+        0,32,145,1,0,0,0,34,154,1,0,0,0,36,165,1,0,0,0,38,181,1,0,0,0,40,
+        191,1,0,0,0,42,200,1,0,0,0,44,215,1,0,0,0,46,233,1,0,0,0,48,235,
+        1,0,0,0,50,242,1,0,0,0,52,244,1,0,0,0,54,246,1,0,0,0,56,250,1,0,
+        0,0,58,258,1,0,0,0,60,260,1,0,0,0,62,267,1,0,0,0,64,65,5,1,0,0,65,
         66,3,2,1,0,66,67,5,31,0,0,67,68,3,2,1,0,68,69,5,31,0,0,69,70,3,2,
         1,0,70,71,5,2,0,0,71,1,1,0,0,0,72,74,5,3,0,0,73,72,1,0,0,0,73,74,
         1,0,0,0,74,75,1,0,0,0,75,78,7,0,0,0,76,78,5,3,0,0,77,73,1,0,0,0,
@@ -60,50 +60,50 @@ def serializedATN():
         124,3,40,20,0,123,117,1,0,0,0,123,118,1,0,0,0,123,119,1,0,0,0,123,
         120,1,0,0,0,123,121,1,0,0,0,123,122,1,0,0,0,124,29,1,0,0,0,125,126,
         5,22,0,0,126,127,5,30,0,0,127,130,3,10,5,0,128,129,5,31,0,0,129,
-        131,5,17,0,0,130,128,1,0,0,0,130,131,1,0,0,0,131,134,1,0,0,0,132,
-        133,5,31,0,0,133,135,3,12,6,0,134,132,1,0,0,0,134,135,1,0,0,0,135,
-        138,1,0,0,0,136,137,5,27,0,0,137,139,3,8,4,0,138,136,1,0,0,0,138,
-        139,1,0,0,0,139,31,1,0,0,0,140,141,5,23,0,0,141,145,5,30,0,0,142,
-        143,3,4,2,0,143,144,5,27,0,0,144,146,1,0,0,0,145,142,1,0,0,0,145,
-        146,1,0,0,0,146,147,1,0,0,0,147,148,3,6,3,0,148,33,1,0,0,0,149,150,
-        5,24,0,0,150,151,5,30,0,0,151,154,3,14,7,0,152,153,5,31,0,0,153,
-        155,5,17,0,0,154,152,1,0,0,0,154,155,1,0,0,0,155,158,1,0,0,0,156,
-        157,5,27,0,0,157,159,3,8,4,0,158,156,1,0,0,0,158,159,1,0,0,0,159,
-        35,1,0,0,0,160,161,5,25,0,0,161,162,5,30,0,0,162,165,3,16,8,0,163,
-        164,5,31,0,0,164,166,3,18,9,0,165,163,1,0,0,0,165,166,1,0,0,0,166,
-        169,1,0,0,0,167,168,5,31,0,0,168,170,3,12,6,0,169,167,1,0,0,0,169,
-        170,1,0,0,0,170,37,1,0,0,0,171,172,5,26,0,0,172,174,5,30,0,0,173,
-        175,5,29,0,0,174,173,1,0,0,0,174,175,1,0,0,0,175,176,1,0,0,0,176,
-        179,3,20,10,0,177,178,5,27,0,0,178,180,3,8,4,0,179,177,1,0,0,0,179,
-        180,1,0,0,0,180,39,1,0,0,0,181,182,5,33,0,0,182,188,5,28,0,0,183,
-        189,3,0,0,0,184,189,5,15,0,0,185,189,3,60,30,0,186,189,3,56,28,0,
-        187,189,5,19,0,0,188,183,1,0,0,0,188,184,1,0,0,0,188,185,1,0,0,0,
-        188,186,1,0,0,0,188,187,1,0,0,0,189,41,1,0,0,0,190,191,5,4,0,0,191,
-        192,5,30,0,0,192,193,3,14,7,0,193,194,5,31,0,0,194,202,5,17,0,0,
-        195,196,5,5,0,0,196,197,3,14,7,0,197,198,5,31,0,0,198,199,5,17,0,
-        0,199,201,1,0,0,0,200,195,1,0,0,0,201,204,1,0,0,0,202,200,1,0,0,
-        0,202,203,1,0,0,0,203,43,1,0,0,0,204,202,1,0,0,0,205,225,5,6,0,0,
-        206,207,5,7,0,0,207,208,5,30,0,0,208,211,3,22,11,0,209,210,5,31,
-        0,0,210,212,3,24,12,0,211,209,1,0,0,0,211,212,1,0,0,0,212,221,1,
-        0,0,0,213,214,5,5,0,0,214,217,3,22,11,0,215,216,5,31,0,0,216,218,
-        3,24,12,0,217,215,1,0,0,0,217,218,1,0,0,0,218,220,1,0,0,0,219,213,
-        1,0,0,0,220,223,1,0,0,0,221,219,1,0,0,0,221,222,1,0,0,0,222,225,
-        1,0,0,0,223,221,1,0,0,0,224,205,1,0,0,0,224,206,1,0,0,0,225,45,1,
-        0,0,0,226,227,5,8,0,0,227,47,1,0,0,0,228,229,5,9,0,0,229,230,5,30,
-        0,0,230,233,3,22,11,0,231,232,5,31,0,0,232,234,3,24,12,0,233,231,
-        1,0,0,0,233,234,1,0,0,0,234,49,1,0,0,0,235,236,5,10,0,0,236,51,1,
-        0,0,0,237,238,5,11,0,0,238,53,1,0,0,0,239,240,5,12,0,0,240,241,5,
-        30,0,0,241,242,7,0,0,0,242,55,1,0,0,0,243,244,5,13,0,0,244,248,3,
-        58,29,0,245,247,5,14,0,0,246,245,1,0,0,0,247,250,1,0,0,0,248,246,
-        1,0,0,0,248,249,1,0,0,0,249,57,1,0,0,0,250,248,1,0,0,0,251,256,3,
-        48,24,0,252,256,3,50,25,0,253,256,3,54,27,0,254,256,3,52,26,0,255,
-        251,1,0,0,0,255,252,1,0,0,0,255,253,1,0,0,0,255,254,1,0,0,0,256,
-        59,1,0,0,0,257,258,5,13,0,0,258,262,3,62,31,0,259,261,5,14,0,0,260,
-        259,1,0,0,0,261,264,1,0,0,0,262,260,1,0,0,0,262,263,1,0,0,0,263,
-        61,1,0,0,0,264,262,1,0,0,0,265,269,3,42,21,0,266,269,3,44,22,0,267,
-        269,3,46,23,0,268,265,1,0,0,0,268,266,1,0,0,0,268,267,1,0,0,0,269,
-        63,1,0,0,0,28,73,77,84,93,101,114,123,130,134,138,145,154,158,165,
-        169,174,179,188,202,211,217,221,224,233,248,255,262,268
+        131,5,17,0,0,130,128,1,0,0,0,130,131,1,0,0,0,131,139,1,0,0,0,132,
+        136,5,31,0,0,133,135,3,12,6,0,134,133,1,0,0,0,135,138,1,0,0,0,136,
+        134,1,0,0,0,136,137,1,0,0,0,137,140,1,0,0,0,138,136,1,0,0,0,139,
+        132,1,0,0,0,139,140,1,0,0,0,140,143,1,0,0,0,141,142,5,27,0,0,142,
+        144,3,8,4,0,143,141,1,0,0,0,143,144,1,0,0,0,144,31,1,0,0,0,145,146,
+        5,23,0,0,146,150,5,30,0,0,147,148,3,4,2,0,148,149,5,27,0,0,149,151,
+        1,0,0,0,150,147,1,0,0,0,150,151,1,0,0,0,151,152,1,0,0,0,152,153,
+        3,6,3,0,153,33,1,0,0,0,154,155,5,24,0,0,155,156,5,30,0,0,156,159,
+        3,14,7,0,157,158,5,31,0,0,158,160,5,17,0,0,159,157,1,0,0,0,159,160,
+        1,0,0,0,160,163,1,0,0,0,161,162,5,27,0,0,162,164,3,8,4,0,163,161,
+        1,0,0,0,163,164,1,0,0,0,164,35,1,0,0,0,165,166,5,25,0,0,166,167,
+        5,30,0,0,167,170,3,16,8,0,168,169,5,31,0,0,169,171,3,18,9,0,170,
+        168,1,0,0,0,170,171,1,0,0,0,171,179,1,0,0,0,172,176,5,31,0,0,173,
+        175,3,12,6,0,174,173,1,0,0,0,175,178,1,0,0,0,176,174,1,0,0,0,176,
+        177,1,0,0,0,177,180,1,0,0,0,178,176,1,0,0,0,179,172,1,0,0,0,179,
+        180,1,0,0,0,180,37,1,0,0,0,181,182,5,26,0,0,182,184,5,30,0,0,183,
+        185,5,29,0,0,184,183,1,0,0,0,184,185,1,0,0,0,185,186,1,0,0,0,186,
+        189,3,20,10,0,187,188,5,27,0,0,188,190,3,8,4,0,189,187,1,0,0,0,189,
+        190,1,0,0,0,190,39,1,0,0,0,191,192,5,33,0,0,192,198,5,28,0,0,193,
+        199,3,0,0,0,194,199,5,15,0,0,195,199,3,60,30,0,196,199,3,56,28,0,
+        197,199,5,19,0,0,198,193,1,0,0,0,198,194,1,0,0,0,198,195,1,0,0,0,
+        198,196,1,0,0,0,198,197,1,0,0,0,199,41,1,0,0,0,200,201,5,4,0,0,201,
+        202,5,30,0,0,202,203,3,14,7,0,203,204,5,31,0,0,204,212,5,17,0,0,
+        205,206,5,5,0,0,206,207,3,14,7,0,207,208,5,31,0,0,208,209,5,17,0,
+        0,209,211,1,0,0,0,210,205,1,0,0,0,211,214,1,0,0,0,212,210,1,0,0,
+        0,212,213,1,0,0,0,213,43,1,0,0,0,214,212,1,0,0,0,215,216,7,3,0,0,
+        216,217,5,30,0,0,217,220,3,22,11,0,218,219,5,31,0,0,219,221,3,24,
+        12,0,220,218,1,0,0,0,220,221,1,0,0,0,221,230,1,0,0,0,222,223,5,5,
+        0,0,223,226,3,22,11,0,224,225,5,31,0,0,225,227,3,24,12,0,226,224,
+        1,0,0,0,226,227,1,0,0,0,227,229,1,0,0,0,228,222,1,0,0,0,229,232,
+        1,0,0,0,230,228,1,0,0,0,230,231,1,0,0,0,231,45,1,0,0,0,232,230,1,
+        0,0,0,233,234,5,8,0,0,234,47,1,0,0,0,235,236,5,9,0,0,236,237,5,30,
+        0,0,237,240,3,22,11,0,238,239,5,31,0,0,239,241,3,24,12,0,240,238,
+        1,0,0,0,240,241,1,0,0,0,241,49,1,0,0,0,242,243,5,10,0,0,243,51,1,
+        0,0,0,244,245,5,11,0,0,245,53,1,0,0,0,246,247,5,12,0,0,247,248,5,
+        30,0,0,248,249,7,0,0,0,249,55,1,0,0,0,250,251,5,13,0,0,251,252,3,
+        58,29,0,252,253,5,14,0,0,253,57,1,0,0,0,254,259,3,48,24,0,255,259,
+        3,50,25,0,256,259,3,54,27,0,257,259,3,52,26,0,258,254,1,0,0,0,258,
+        255,1,0,0,0,258,256,1,0,0,0,258,257,1,0,0,0,259,59,1,0,0,0,260,261,
+        5,13,0,0,261,262,3,62,31,0,262,263,5,14,0,0,263,61,1,0,0,0,264,268,
+        3,42,21,0,265,268,3,44,22,0,266,268,3,46,23,0,267,264,1,0,0,0,267,
+        265,1,0,0,0,267,266,1,0,0,0,268,63,1,0,0,0,27,73,77,84,93,101,114,
+        123,130,136,139,143,150,159,163,170,176,179,184,189,198,212,220,
+        226,230,240,258,267
     ]
 
 class minecraftCommandsParser ( Parser ):
@@ -402,7 +402,7 @@ class minecraftCommandsParser ( Parser ):
     def origem_tp(self):
 
         localctx = minecraftCommandsParser.Origem_tpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_origem_tp)
+        self.enterRule(localctx, 4, self.RULE_origem_tp)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -462,7 +462,7 @@ class minecraftCommandsParser ( Parser ):
     def destino_tp(self):
 
         localctx = minecraftCommandsParser.Destino_tpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_destino_tp)
+        self.enterRule(localctx, 6, self.RULE_destino_tp)
         try:
             self.state = 84
             self._errHandler.sync(self)
@@ -477,7 +477,7 @@ class minecraftCommandsParser ( Parser ):
                 self.state = 82
                 self.coordenadas()
                 pass
-            elif token in [32]:
+            elif token in [33]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 83
                 self.match(minecraftCommandsParser.IDENT)
@@ -1151,32 +1151,32 @@ class minecraftCommandsParser ( Parser ):
             self.state = 123
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [21]:
+            if token in [22]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 117
                 self.cmd_dar_item()
                 pass
-            elif token in [22]:
+            elif token in [23]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 118
                 self.cmd_teleporte()
                 pass
-            elif token in [23]:
+            elif token in [24]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 119
                 self.cmd_encantar()
                 pass
-            elif token in [24]:
+            elif token in [25]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 120
                 self.cmd_criar_mob()
                 pass
-            elif token in [25]:
+            elif token in [26]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 121
                 self.cmd_conquista()
                 pass
-            elif token in [32]:
+            elif token in [33]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 122
                 self.cmd_atribuicao()
@@ -1219,15 +1219,18 @@ class minecraftCommandsParser ( Parser ):
         def NUM_INT(self):
             return self.getToken(minecraftCommandsParser.NUM_INT, 0)
 
-        def mod(self):
-            return self.getTypedRuleContext(minecraftCommandsParser.ModContext,0)
-
-
         def ALVO(self):
             return self.getToken(minecraftCommandsParser.ALVO, 0)
 
         def player(self):
             return self.getTypedRuleContext(minecraftCommandsParser.PlayerContext,0)
+
+
+        def mod(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(minecraftCommandsParser.ModContext)
+            else:
+                return self.getTypedRuleContext(minecraftCommandsParser.ModContext,i)
 
 
         def getRuleIndex(self):
@@ -1273,23 +1276,31 @@ class minecraftCommandsParser ( Parser ):
                 self.match(minecraftCommandsParser.NUM_INT)
 
 
-            self.state = 134
+            self.state = 139
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==31:
                 self.state = 132
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 133
-                self.mod()
+                self.state = 136
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==13 or _la==33:
+                    self.state = 133
+                    self.mod()
+                    self.state = 138
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
 
 
-            self.state = 138
+
+            self.state = 143
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==27:
-                self.state = 136
+                self.state = 141
                 self.match(minecraftCommandsParser.ALVO)
-                self.state = 137
+                self.state = 142
                 self.player()
 
 
@@ -1352,21 +1363,21 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_cmd_teleporte)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 140
-            self.match(minecraftCommandsParser.TELEPORTE)
-            self.state = 141
-            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
             self.state = 145
+            self.match(minecraftCommandsParser.TELEPORTE)
+            self.state = 146
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 150
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
             if la_ == 1:
-                self.state = 142
+                self.state = 147
                 self.origem_tp()
-                self.state = 143
+                self.state = 148
                 self.match(minecraftCommandsParser.ALVO)
 
 
-            self.state = 147
+            self.state = 152
             self.destino_tp()
         except RecognitionException as re:
             localctx.exception = re
@@ -1393,12 +1404,6 @@ class minecraftCommandsParser ( Parser ):
         def encantamento_var(self):
             return self.getTypedRuleContext(minecraftCommandsParser.Encantamento_varContext,0)
 
-
-        def IDENT(self, i:int=None):
-            if i is None:
-                return self.getTokens(minecraftCommandsParser.IDENT)
-            else:
-                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def VIRGULA(self):
             return self.getToken(minecraftCommandsParser.VIRGULA, 0)
@@ -1440,29 +1445,29 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 149
-            self.match(minecraftCommandsParser.ENCANTAR)
-            self.state = 150
-            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 151
-            self.encantamento_var()
             self.state = 154
+            self.match(minecraftCommandsParser.ENCANTAR)
+            self.state = 155
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 156
+            self.encantamento_var()
+            self.state = 159
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==31:
-                self.state = 152
+                self.state = 157
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 153
+                self.state = 158
                 self.match(minecraftCommandsParser.NUM_INT)
 
 
-            self.state = 158
+            self.state = 163
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==27:
-                self.state = 156
+                self.state = 161
                 self.match(minecraftCommandsParser.ALVO)
-                self.state = 157
+                self.state = 162
                 self.player()
 
 
@@ -1492,12 +1497,6 @@ class minecraftCommandsParser ( Parser ):
             return self.getTypedRuleContext(minecraftCommandsParser.MobContext,0)
 
 
-        def IDENT(self, i:int=None):
-            if i is None:
-                return self.getTokens(minecraftCommandsParser.IDENT)
-            else:
-                return self.getToken(minecraftCommandsParser.IDENT, i)
-
         def VIRGULA(self, i:int=None):
             if i is None:
                 return self.getTokens(minecraftCommandsParser.VIRGULA)
@@ -1508,8 +1507,11 @@ class minecraftCommandsParser ( Parser ):
             return self.getTypedRuleContext(minecraftCommandsParser.Coordenada_varContext,0)
 
 
-        def mod(self):
-            return self.getTypedRuleContext(minecraftCommandsParser.ModContext,0)
+        def mod(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(minecraftCommandsParser.ModContext)
+            else:
+                return self.getTypedRuleContext(minecraftCommandsParser.ModContext,i)
 
 
         def getRuleIndex(self):
@@ -1539,30 +1541,38 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 160
-            self.match(minecraftCommandsParser.CRIAR_MOB)
-            self.state = 161
-            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 162
-            self.mob()
             self.state = 165
+            self.match(minecraftCommandsParser.CRIAR_MOB)
+            self.state = 166
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 167
+            self.mob()
+            self.state = 170
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
             if la_ == 1:
-                self.state = 163
+                self.state = 168
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 164
+                self.state = 169
                 self.coordenada_var()
 
 
-            self.state = 169
+            self.state = 179
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==31:
-                self.state = 167
+                self.state = 172
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 168
-                self.mod()
+                self.state = 176
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==13 or _la==33:
+                    self.state = 173
+                    self.mod()
+                    self.state = 178
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
 
 
         except RecognitionException as re:
@@ -1590,12 +1600,6 @@ class minecraftCommandsParser ( Parser ):
         def conquista_var(self):
             return self.getTypedRuleContext(minecraftCommandsParser.Conquista_varContext,0)
 
-
-        def IDENT(self, i:int=None):
-            if i is None:
-                return self.getTokens(minecraftCommandsParser.IDENT)
-            else:
-                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def NEGACAO(self):
             return self.getToken(minecraftCommandsParser.NEGACAO, 0)
@@ -1634,27 +1638,27 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 171
+            self.state = 181
             self.match(minecraftCommandsParser.CONQUISTA)
-            self.state = 172
+            self.state = 182
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 174
+            self.state = 184
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==29:
-                self.state = 173
+                self.state = 183
                 self.match(minecraftCommandsParser.NEGACAO)
 
 
-            self.state = 176
+            self.state = 186
             self.conquista_var()
-            self.state = 179
+            self.state = 189
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==27:
-                self.state = 177
+                self.state = 187
                 self.match(minecraftCommandsParser.ALVO)
-                self.state = 178
+                self.state = 188
                 self.player()
 
 
@@ -1724,40 +1728,35 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 40, self.RULE_cmd_atribuicao)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 181
+            self.state = 191
             self.match(minecraftCommandsParser.IDENT)
-            self.state = 182
+            self.state = 192
             self.match(minecraftCommandsParser.ATRIBUICAO)
-            self.state = 188
+            self.state = 198
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
             if la_ == 1:
-                self.state = 183
+                self.state = 193
                 self.coordenadas()
                 pass
 
             elif la_ == 2:
-                self.state = 184
+                self.state = 194
                 self.match(minecraftCommandsParser.STRING)
                 pass
 
             elif la_ == 3:
-                self.state = 185
+                self.state = 195
                 self.modificadores_item()
                 pass
 
             elif la_ == 4:
-                self.state = 186
+                self.state = 196
                 self.modificadores_mob()
                 pass
 
             elif la_ == 5:
-                self.state = 187
-                self.match(minecraftCommandsParser.COR_HEX)
-                pass
-
-            elif la_ == 5:
-                self.state = 155
+                self.state = 197
                 self.match(minecraftCommandsParser.COR_HEX)
                 pass
 
@@ -1827,29 +1826,29 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 190
+            self.state = 200
             self.match(minecraftCommandsParser.T__3)
-            self.state = 191
+            self.state = 201
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 192
-            self.encantamento_var()
-            self.state = 193
-            self.match(minecraftCommandsParser.VIRGULA)
-            self.state = 194
-            self.match(minecraftCommandsParser.NUM_INT)
             self.state = 202
+            self.encantamento_var()
+            self.state = 203
+            self.match(minecraftCommandsParser.VIRGULA)
+            self.state = 204
+            self.match(minecraftCommandsParser.NUM_INT)
+            self.state = 212
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==5:
-                self.state = 195
+                self.state = 205
                 self.match(minecraftCommandsParser.T__4)
-                self.state = 196
+                self.state = 206
                 self.encantamento_var()
-                self.state = 197
+                self.state = 207
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 198
+                self.state = 208
                 self.match(minecraftCommandsParser.NUM_INT)
-                self.state = 204
+                self.state = 214
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1918,57 +1917,49 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 44, self.RULE_mod_exibicao)
         self._la = 0 # Token type
         try:
-            self.state = 224
+            self.enterOuterAlt(localctx, 1)
+            self.state = 215
+            _la = self._input.LA(1)
+            if not(_la==6 or _la==7):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
+            self.state = 216
+            self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
+            self.state = 217
+            self.texto()
+            self.state = 220
             self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [6]:
-                self.enterOuterAlt(localctx, 1)
-                self.state = 205
-                self.match(minecraftCommandsParser.T__5)
-                pass
-            elif token in [7]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 206
-                self.match(minecraftCommandsParser.T__6)
-                self.state = 207
-                self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-                self.state = 208
+            _la = self._input.LA(1)
+            if _la==31:
+                self.state = 218
+                self.match(minecraftCommandsParser.VIRGULA)
+                self.state = 219
+                self.cor()
+
+
+            self.state = 230
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==5:
+                self.state = 222
+                self.match(minecraftCommandsParser.T__4)
+                self.state = 223
                 self.texto()
-                self.state = 211
+                self.state = 226
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==31:
-                    self.state = 209
+                    self.state = 224
                     self.match(minecraftCommandsParser.VIRGULA)
-                    self.state = 210
+                    self.state = 225
                     self.cor()
 
 
-                self.state = 221
+                self.state = 232
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==5:
-                    self.state = 213
-                    self.match(minecraftCommandsParser.T__4)
-                    self.state = 214
-                    self.texto()
-                    self.state = 217
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-                    if _la==31:
-                        self.state = 215
-                        self.match(minecraftCommandsParser.VIRGULA)
-                        self.state = 216
-                        self.cor()
-
-
-                    self.state = 223
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
-                pass
-            else:
-                raise NoViableAltException(self)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2013,7 +2004,7 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 46, self.RULE_mod_inquebravel)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 226
+            self.state = 233
             self.match(minecraftCommandsParser.T__7)
         except RecognitionException as re:
             localctx.exception = re
@@ -2037,12 +2028,6 @@ class minecraftCommandsParser ( Parser ):
         def texto(self):
             return self.getTypedRuleContext(minecraftCommandsParser.TextoContext,0)
 
-
-        def IDENT(self, i:int=None):
-            if i is None:
-                return self.getTokens(minecraftCommandsParser.IDENT)
-            else:
-                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def VIRGULA(self):
             return self.getToken(minecraftCommandsParser.VIRGULA, 0)
@@ -2078,19 +2063,19 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 228
+            self.state = 235
             self.match(minecraftCommandsParser.T__8)
-            self.state = 229
+            self.state = 236
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 230
+            self.state = 237
             self.texto()
-            self.state = 233
+            self.state = 240
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==31:
-                self.state = 231
+                self.state = 238
                 self.match(minecraftCommandsParser.VIRGULA)
-                self.state = 232
+                self.state = 239
                 self.cor()
 
 
@@ -2137,7 +2122,7 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 50, self.RULE_mod_semIA)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 235
+            self.state = 242
             self.match(minecraftCommandsParser.T__9)
         except RecognitionException as re:
             localctx.exception = re
@@ -2182,7 +2167,7 @@ class minecraftCommandsParser ( Parser ):
         self.enterRule(localctx, 52, self.RULE_mod_invulneravel)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 237
+            self.state = 244
             self.match(minecraftCommandsParser.T__10)
         except RecognitionException as re:
             localctx.exception = re
@@ -2236,11 +2221,11 @@ class minecraftCommandsParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 239
+            self.state = 246
             self.match(minecraftCommandsParser.T__11)
-            self.state = 240
+            self.state = 247
             self.match(minecraftCommandsParser.SEPARADOR_COMANDO)
-            self.state = 241
+            self.state = 248
             _la = self._input.LA(1)
             if not(_la==17 or _la==18):
                 self._errHandler.recoverInline(self)
@@ -2291,23 +2276,14 @@ class minecraftCommandsParser ( Parser ):
 
         localctx = minecraftCommandsParser.Modificadores_mobContext(self, self._ctx, self.state)
         self.enterRule(localctx, 56, self.RULE_modificadores_mob)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 243
+            self.state = 250
             self.match(minecraftCommandsParser.T__12)
-            self.state = 244
+            self.state = 251
             self.modificador_mob()
-            self.state = 248
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==14:
-                self.state = 245
-                self.match(minecraftCommandsParser.T__13)
-                self.state = 250
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
+            self.state = 252
+            self.match(minecraftCommandsParser.T__13)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2365,27 +2341,27 @@ class minecraftCommandsParser ( Parser ):
         localctx = minecraftCommandsParser.Modificador_mobContext(self, self._ctx, self.state)
         self.enterRule(localctx, 58, self.RULE_modificador_mob)
         try:
-            self.state = 255
+            self.state = 258
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [9]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 251
+                self.state = 254
                 self.mod_nome_mob()
                 pass
             elif token in [10]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 252
+                self.state = 255
                 self.mod_semIA()
                 pass
             elif token in [12]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 253
+                self.state = 256
                 self.mod_vida()
                 pass
             elif token in [11]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 254
+                self.state = 257
                 self.mod_invulneravel()
                 pass
             else:
@@ -2435,23 +2411,14 @@ class minecraftCommandsParser ( Parser ):
 
         localctx = minecraftCommandsParser.Modificadores_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 60, self.RULE_modificadores_item)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 257
+            self.state = 260
             self.match(minecraftCommandsParser.T__12)
-            self.state = 258
+            self.state = 261
             self.modificador_item()
             self.state = 262
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==14:
-                self.state = 259
-                self.match(minecraftCommandsParser.T__13)
-                self.state = 264
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
+            self.match(minecraftCommandsParser.T__13)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2505,22 +2472,22 @@ class minecraftCommandsParser ( Parser ):
         localctx = minecraftCommandsParser.Modificador_itemContext(self, self._ctx, self.state)
         self.enterRule(localctx, 62, self.RULE_modificador_item)
         try:
-            self.state = 268
+            self.state = 267
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [4]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 265
+                self.state = 264
                 self.mod_encantamento()
                 pass
             elif token in [6, 7]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 266
+                self.state = 265
                 self.mod_exibicao()
                 pass
             elif token in [8]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 267
+                self.state = 266
                 self.mod_inquebravel()
                 pass
             else:

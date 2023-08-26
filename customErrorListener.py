@@ -9,4 +9,4 @@ class CustomErrorListener(ErrorListener):
             tokenText = offendingSymbol.text
             self.erroSintatico = True
 
-            print(f"Linha {line} coluna {column}: Erro sintático próximo a {tokenText}")
+            print(f"Linha {line}-{column}: Erro sintático próximo a {tokenText}")

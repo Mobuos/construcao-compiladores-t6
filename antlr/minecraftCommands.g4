@@ -70,10 +70,10 @@ cmd
     | cmd_conquista
     | cmd_atribuicao
 ;
-cmd_dar_item: DAR_ITEM ':' item (',' NUM_INT)? (',' mod)? ('->' player)?; 
+cmd_dar_item: DAR_ITEM ':' item (',' NUM_INT)? (',' mod*)? ('->' player)?; 
 cmd_teleporte: TELEPORTE ':' (origem_tp '->')? destino_tp;
 cmd_encantar: ENCANTAR ':' encantamento_var (',' NUM_INT)? ('->' player)?;
-cmd_criar_mob: CRIAR_MOB ':' mob (',' coordenada_var)? (',' mod)?;
+cmd_criar_mob: CRIAR_MOB ':' mob (',' coordenada_var)? (',' mod*)?;
 cmd_conquista: CONQUISTA ':' '-'? conquista_var ('->' player)?;
 cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificadores_mob | COR_HEX);
 
@@ -83,7 +83,7 @@ mod_encantamento
 
 // Modificador de exibição, estrutura: 'nome: "Item mágico", #0000FF' ou 'lore: "Incrível item\n Feito por Votor", #0000FF'
 mod_exibicao
-    : 'nome' | 'lore' ':' texto (',' cor)? ('+' texto (',' cor)?)*;
+    : ('nome' | 'lore') ':' texto (',' cor)? ('+' texto (',' cor)?)*;
 
 // Modificador, indica que o item é inquebrável
 mod_inquebravel
@@ -106,7 +106,7 @@ mod_vida
     : 'vida' ':' (NUM_REAL | NUM_INT);
 
 // Modificadores compatíveis com mobs
-modificadores_mob: '{' modificador_mob '}'*;
+modificadores_mob: '{' modificador_mob '}';
 modificador_mob
     : mod_nome_mob
     | mod_semIA
@@ -115,7 +115,7 @@ modificador_mob
     ;
 
 // Modificadores compatíveis com itens
-modificadores_item: '{' modificador_item '}'*;
+modificadores_item: '{' modificador_item '}';
 modificador_item
     : mod_encantamento
     | mod_exibicao
