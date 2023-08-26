@@ -402,7 +402,7 @@ class minecraftCommandsParser ( Parser ):
     def origem_tp(self):
 
         localctx = minecraftCommandsParser.Origem_tpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_origem_tp)
+        self.enterRule(localctx, 6, self.RULE_origem_tp)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -462,7 +462,7 @@ class minecraftCommandsParser ( Parser ):
     def destino_tp(self):
 
         localctx = minecraftCommandsParser.Destino_tpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_destino_tp)
+        self.enterRule(localctx, 8, self.RULE_destino_tp)
         try:
             self.state = 84
             self._errHandler.sync(self)
@@ -477,7 +477,7 @@ class minecraftCommandsParser ( Parser ):
                 self.state = 82
                 self.coordenadas()
                 pass
-            elif token in [33]:
+            elif token in [32]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 83
                 self.match(minecraftCommandsParser.IDENT)
@@ -1151,32 +1151,32 @@ class minecraftCommandsParser ( Parser ):
             self.state = 123
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [22]:
+            if token in [21]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 117
                 self.cmd_dar_item()
                 pass
-            elif token in [23]:
+            elif token in [22]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 118
                 self.cmd_teleporte()
                 pass
-            elif token in [24]:
+            elif token in [23]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 119
                 self.cmd_encantar()
                 pass
-            elif token in [25]:
+            elif token in [24]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 120
                 self.cmd_criar_mob()
                 pass
-            elif token in [26]:
+            elif token in [25]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 121
                 self.cmd_conquista()
                 pass
-            elif token in [33]:
+            elif token in [32]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 122
                 self.cmd_atribuicao()
@@ -1394,6 +1394,12 @@ class minecraftCommandsParser ( Parser ):
             return self.getTypedRuleContext(minecraftCommandsParser.Encantamento_varContext,0)
 
 
+        def IDENT(self, i:int=None):
+            if i is None:
+                return self.getTokens(minecraftCommandsParser.IDENT)
+            else:
+                return self.getToken(minecraftCommandsParser.IDENT, i)
+
         def VIRGULA(self):
             return self.getToken(minecraftCommandsParser.VIRGULA, 0)
 
@@ -1485,6 +1491,12 @@ class minecraftCommandsParser ( Parser ):
         def mob(self):
             return self.getTypedRuleContext(minecraftCommandsParser.MobContext,0)
 
+
+        def IDENT(self, i:int=None):
+            if i is None:
+                return self.getTokens(minecraftCommandsParser.IDENT)
+            else:
+                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def VIRGULA(self, i:int=None):
             if i is None:
@@ -1578,6 +1590,12 @@ class minecraftCommandsParser ( Parser ):
         def conquista_var(self):
             return self.getTypedRuleContext(minecraftCommandsParser.Conquista_varContext,0)
 
+
+        def IDENT(self, i:int=None):
+            if i is None:
+                return self.getTokens(minecraftCommandsParser.IDENT)
+            else:
+                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def NEGACAO(self):
             return self.getToken(minecraftCommandsParser.NEGACAO, 0)
@@ -1735,6 +1753,11 @@ class minecraftCommandsParser ( Parser ):
 
             elif la_ == 5:
                 self.state = 187
+                self.match(minecraftCommandsParser.COR_HEX)
+                pass
+
+            elif la_ == 5:
+                self.state = 155
                 self.match(minecraftCommandsParser.COR_HEX)
                 pass
 
@@ -2014,6 +2037,12 @@ class minecraftCommandsParser ( Parser ):
         def texto(self):
             return self.getTypedRuleContext(minecraftCommandsParser.TextoContext,0)
 
+
+        def IDENT(self, i:int=None):
+            if i is None:
+                return self.getTokens(minecraftCommandsParser.IDENT)
+            else:
+                return self.getToken(minecraftCommandsParser.IDENT, i)
 
         def VIRGULA(self):
             return self.getToken(minecraftCommandsParser.VIRGULA, 0)

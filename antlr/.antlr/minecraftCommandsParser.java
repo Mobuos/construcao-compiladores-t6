@@ -240,7 +240,7 @@ public class minecraftCommandsParser extends Parser {
 
 	public final Origem_tpContext origem_tp() throws RecognitionException {
 		Origem_tpContext _localctx = new Origem_tpContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_origem_tp);
+		enterRule(_localctx, 6, RULE_origem_tp);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -282,7 +282,7 @@ public class minecraftCommandsParser extends Parser {
 
 	public final Destino_tpContext destino_tp() throws RecognitionException {
 		Destino_tpContext _localctx = new Destino_tpContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_destino_tp);
+		enterRule(_localctx, 8, RULE_destino_tp);
 		try {
 			setState(84);
 			_errHandler.sync(this);
@@ -985,6 +985,10 @@ public class minecraftCommandsParser extends Parser {
 		public Encantamento_varContext encantamento_var() {
 			return getRuleContext(Encantamento_varContext.class,0);
 		}
+		public List<TerminalNode> IDENT() { return getTokens(minecraftCommandsParser.IDENT); }
+		public TerminalNode IDENT(int i) {
+			return getToken(minecraftCommandsParser.IDENT, i);
+		}
 		public TerminalNode VIRGULA() { return getToken(minecraftCommandsParser.VIRGULA, 0); }
 		public TerminalNode NUM_INT() { return getToken(minecraftCommandsParser.NUM_INT, 0); }
 		public TerminalNode ALVO() { return getToken(minecraftCommandsParser.ALVO, 0); }
@@ -1125,6 +1129,10 @@ public class minecraftCommandsParser extends Parser {
 		public Conquista_varContext conquista_var() {
 			return getRuleContext(Conquista_varContext.class,0);
 		}
+		public List<TerminalNode> IDENT() { return getTokens(minecraftCommandsParser.IDENT); }
+		public TerminalNode IDENT(int i) {
+			return getToken(minecraftCommandsParser.IDENT, i);
+		}
 		public TerminalNode NEGACAO() { return getToken(minecraftCommandsParser.NEGACAO, 0); }
 		public TerminalNode ALVO() { return getToken(minecraftCommandsParser.ALVO, 0); }
 		public PlayerContext player() {
@@ -1244,6 +1252,12 @@ public class minecraftCommandsParser extends Parser {
 			case 5:
 				{
 				setState(187);
+				match(COR_HEX);
+				}
+				break;
+			case 5:
+				{
+				setState(155);
 				match(COR_HEX);
 				}
 				break;
