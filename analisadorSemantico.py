@@ -46,7 +46,9 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         erroItem = False
 
         if ctx.IDENT() != None:
-            erroItem = not SemanticoUtils.verificaVariavelExiste(nomeItem, self.tabela)
+            erroItem = not SemanticoUtils.verificaVariavelExiste(
+                nomeItem, self.tabela, ctx
+            )
             if not erroItem:
                 tipoVar = self.tabela.recuperarTipo(nomeItem)
 
@@ -60,7 +62,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
                     nomeItem = self.tabela.recuperarValor(nomeItem).replace('"', "")
 
         if not erroItem:
-            if not (nomeItem in Itens.keys()):
+            if not (nomeItem.lower() in Itens.keys()):
                 SemanticoUtils.adicionarErroSemantico(
                     ctx.start, f"{nomeItem} item não encontrado"
                 )
@@ -77,7 +79,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVarMod = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVarMod, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVarMod, self.tabela, ctx):
                 tipoMod = self.tabela.recuperarTipo(nomeVarMod)
                 msg = "incompatibilidade de tipo de variável"
 
@@ -92,7 +94,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.COORDENADA:
@@ -106,7 +108,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.STRING:
@@ -120,7 +122,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.STRING:
@@ -134,7 +136,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.STRING and tipoVar != Tipo.COORDENADA:
@@ -149,7 +151,9 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         erroEnc = False
 
         if ctx.IDENT() != None:
-            erroEnc = not SemanticoUtils.verificaVariavelExiste(nomeEnc, self.tabela)
+            erroEnc = not SemanticoUtils.verificaVariavelExiste(
+                nomeEnc, self.tabela, ctx
+            )
 
             if not erroEnc:
                 tipoVar = self.tabela.recuperarTipo(nomeEnc)
@@ -164,7 +168,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
                     nomeEnc = self.tabela.recuperarValor(nomeEnc).replace('"', "")
 
         if not erroEnc:
-            if not (nomeEnc in Encantamentos.keys()):
+            if not (nomeEnc.lower() in Encantamentos.keys()):
                 SemanticoUtils.adicionarErroSemantico(
                     ctx.start, f"{nomeEnc} encantamento não encontrado"
                 )
@@ -175,7 +179,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.STRING:
@@ -191,7 +195,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
 
         if ctx.IDENT() != None:
             erroConq = not SemanticoUtils.verificaVariavelExiste(
-                nomeConquista, self.tabela
+                nomeConquista, self.tabela, ctx
             )
 
             if not erroConq:
@@ -209,7 +213,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
                     )
 
         if not erroConq:
-            if not (nomeConquista in Encantamentos.keys()):
+            if not (nomeConquista.lower() in Encantamentos.keys()):
                 SemanticoUtils.adicionarErroSemantico(
                     ctx.start, f"{nomeConquista} encantamento não encontrado"
                 )
@@ -220,7 +224,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.COR:
@@ -234,7 +238,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         if ctx.IDENT() != None:
             nomeVar = ctx.IDENT().getText()
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela):
+            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
                 tipoVar = self.tabela.recuperarTipo(nomeVar)
 
                 if tipoVar != Tipo.STRING:

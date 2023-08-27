@@ -26,9 +26,11 @@ class AnalisadorSemanticoUtils:
 
         return True
 
-    def verificaVariavelExiste(nomeVar: str, tabela: Tabela):
+    def verificaVariavelExiste(nomeVar: str, tabela: Tabela, ctx):
         if not tabela.existe(nomeVar):
-            SemanticoUtils.adicionarErroSemantico(ctx.start, "variável não declarada")
+            AnalisadorSemanticoUtils.adicionarErroSemantico(
+                ctx.start, "variável não declarada"
+            )
             return False
 
         return True
