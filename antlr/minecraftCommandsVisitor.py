@@ -94,11 +94,6 @@ class minecraftCommandsVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by minecraftCommandsParser#cmd_encantar.
-    def visitCmd_encantar(self, ctx:minecraftCommandsParser.Cmd_encantarContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by minecraftCommandsParser#cmd_criar_mob.
     def visitCmd_criar_mob(self, ctx:minecraftCommandsParser.Cmd_criar_mobContext):
         return self.visitChildren(ctx)

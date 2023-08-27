@@ -161,15 +161,6 @@ class minecraftCommandsListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by minecraftCommandsParser#cmd_encantar.
-    def enterCmd_encantar(self, ctx:minecraftCommandsParser.Cmd_encantarContext):
-        pass
-
-    # Exit a parse tree produced by minecraftCommandsParser#cmd_encantar.
-    def exitCmd_encantar(self, ctx:minecraftCommandsParser.Cmd_encantarContext):
-        pass
-
-
     # Enter a parse tree produced by minecraftCommandsParser#cmd_criar_mob.
     def enterCmd_criar_mob(self, ctx:minecraftCommandsParser.Cmd_criar_mobContext):
         pass

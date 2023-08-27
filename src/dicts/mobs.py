@@ -1,4 +1,4 @@
-mobs = {
+Mobs = {
     "axolotl": "axolotl",
     "bat": "bat",
     "bee": "bee",

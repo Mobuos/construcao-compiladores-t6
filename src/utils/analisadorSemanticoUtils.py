@@ -1,7 +1,7 @@
 from antlr4.Token import Token
 from antlr.minecraftCommandsParser import minecraftCommandsParser as parser
-from tabeladesimbolos import TipoSimbolo as Tipo
-from tabeladesimbolos import TabelaDeSimbolos as Tabela
+from .tabeladesimbolos import TipoSimbolo as Tipo
+from .tabeladesimbolos import TabelaDeSimbolos as Tabela
 
 
 class AnalisadorSemanticoUtils:
@@ -20,7 +20,7 @@ class AnalisadorSemanticoUtils:
         if isinstance(paiCtx, parser.Cmd_dar_itemContext) and tipoMod == Tipo.MOD_MOB:
             return False
         elif (
-            isinstance(paiCtx, parser.Cmd_criar_mobContext) and tipoVar == Tipo.MOD_ITEM
+            isinstance(paiCtx, parser.Cmd_criar_mobContext) and tipoMod == Tipo.MOD_ITEM
         ):
             return False
 

@@ -1,4 +1,4 @@
-itens = {
+Itens = {
     "stone": "stone",
     "granite": "granite",
     "polished granite": "polished_granite",

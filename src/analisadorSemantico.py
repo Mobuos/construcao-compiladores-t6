@@ -1,10 +1,11 @@
 from antlr.minecraftCommandsVisitor import minecraftCommandsVisitor
-from analisadorSemanticoUtils import AnalisadorSemanticoUtils as SemanticoUtils
+from .utils.analisadorSemanticoUtils import AnalisadorSemanticoUtils as SemanticoUtils
 from antlr.minecraftCommandsParser import minecraftCommandsParser as parser
-from tabeladesimbolos import TabelaDeSimbolos as Tabela
-from tabeladesimbolos import TipoSimbolo as Tipo
-from dicts.itens import itens as Itens
-from dicts.encantamentos import Encantamentos
+from .utils.tabeladesimbolos import TabelaDeSimbolos as Tabela
+from .utils.tabeladesimbolos import TipoSimbolo as Tipo
+from .dicts.itens import Itens as Itens
+from .dicts.encantamentos import Encantamentos
+from .dicts.conquistas import Conquistas
 
 
 class AnalisadorSemantico(minecraftCommandsVisitor):
@@ -213,9 +214,9 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
                     )
 
         if not erroConq:
-            if not (nomeConquista.lower() in Encantamentos.keys()):
+            if not (nomeConquista.lower() in Conquistas.keys()):
                 SemanticoUtils.adicionarErroSemantico(
-                    ctx.start, f"{nomeConquista} encantamento não encontrado"
+                    ctx.start, f"{nomeConquista} conquista não encontrada"
                 )
 
         super().visitConquista_var(ctx)

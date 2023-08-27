@@ -67,12 +67,9 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
   // Teleporta determinada origem para determinado destino, caso não haja origem, a origem será o próprio player.
   teleporte: origem? ->? destino;
 
-  // Encanta o item que está na mão do determinado player.
-  encantar: encantamento, level? ->? player?;
-
   // Cria um mob.
   criar_mob: nome_do_mob, posicao?, modificadores?;
-  // Modificadores disponíveis: Health, NoAI, CustomName, Invulnerable
+  // Modificadores disponíveis: health, noAI, customName, invulnerable
 
   // Gerencia conquistas para determinado jogador.
   conquista: -? nome_conquista ->? player?;

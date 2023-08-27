@@ -4,11 +4,10 @@ from antlr.minecraftCommandsLexer import minecraftCommandsLexer
 from antlr.minecraftCommandsParser import minecraftCommandsParser
 from antlr.minecraftCommandsListener import minecraftCommandsListener
 from antlr.minecraftCommandsVisitor import minecraftCommandsVisitor
-from dicts.conquistas import conquistas
-from dicts.mobs import mobs
-from customErrorListener import CustomErrorListener
-from analisadorSemantico import AnalisadorSemantico
-from analisadorSemanticoUtils import AnalisadorSemanticoUtils
+from src.utils.customErrorListener import CustomErrorListener
+from src.analisadorSemantico import AnalisadorSemantico
+from src.utils.analisadorSemanticoUtils import AnalisadorSemanticoUtils
+from src.geradorComandos import GeradorComandos
 
 
 def main(argv):
@@ -70,10 +69,8 @@ def main(argv):
 
             # *Geração da saída*
             if len(semanticoUtils.errosSemanticos) == 0:
-                pass
-                # LAGeradorC agc = new LAGeradorC()
-                # agc.visitPrograma(arvore)
-                # writer.print(agc.saida.toString())
+                geradorComando = GeradorComandos()
+                geradorComando.visitPrograma(arvore)
 
 
 if __name__ == "__main__":

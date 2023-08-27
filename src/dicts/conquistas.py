@@ -1,4 +1,4 @@
-conquistas = {
+Conquistas = {
     "minecraft": "story/root",
     "stone age": "story/mine_stone",
     "getting an upgrade": "story/upgrade_tools",
@@ -109,4 +109,5 @@ conquistas = {
     "with our powers combined!": "husbandry/froglights",
     "planting the past": "husbandry/plant_any_sniffer_seed",
     "the healing power of friendship!": "husbandry/kill_axolotl_target",
+    "everything": "everything",
 }

@@ -65,14 +65,12 @@ programa: (cmd';')*;
 cmd
     : cmd_dar_item 
     | cmd_teleporte 
-    | cmd_encantar
     | cmd_criar_mob
     | cmd_conquista
     | cmd_atribuicao
 ;
 cmd_dar_item: DAR_ITEM ':' item (',' NUM_INT)? (',' mod*)? ('->' player)?; 
 cmd_teleporte: TELEPORTE ':' (origem_tp '->')? destino_tp;
-cmd_encantar: ENCANTAR ':' encantamento_var (',' NUM_INT)? ('->' player)?;
 cmd_criar_mob: CRIAR_MOB ':' mob (',' coordenada_var)? (',' mod*)?;
 cmd_conquista: CONQUISTA ':' '-'? conquista_var ('->' player)?;
 cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificadores_mob | COR_HEX);
