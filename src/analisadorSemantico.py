@@ -6,6 +6,7 @@ from .utils.tabeladesimbolos import TipoSimbolo as Tipo
 from .dicts.itens import Itens as Itens
 from .dicts.encantamentos import Encantamentos
 from .dicts.conquistas import Conquistas
+from .dicts.mobs import Mobs
 
 
 class AnalisadorSemantico(minecraftCommandsVisitor):
@@ -177,16 +178,31 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         super().visitEncantamento_var(ctx)
 
     def visitMob(self, ctx: parser.MobContext):
-        if ctx.IDENT() != None:
-            nomeVar = ctx.IDENT().getText()
+        nomeMob = ctx.getText().replace('"', "")
+        erroMob = False
 
-            if SemanticoUtils.verificaVariavelExiste(nomeVar, self.tabela, ctx):
-                tipoVar = self.tabela.recuperarTipo(nomeVar)
+        if ctx.IDENT() != None:
+            erroMob = not SemanticoUtils.verificaVariavelExiste(
+                nomeMob, self.tabela, ctx
+            )
+
+            if not erroMob:
+                tipoVar = self.tabela.recuperarTipo(nomeMob)
 
                 if tipoVar != Tipo.STRING:
                     SemanticoUtils.adicionarErroSemantico(
                         ctx.start, "incompatibilidade de tipo de variável"
                     )
+                    erroMob = True
+
+                else:
+                    nomeMob = self.tabela.recuperarValor(nomeMob).replace('"', "")
+
+        if not erroMob:
+            if not (nomeMob.lower() in Mobs.keys()):
+                SemanticoUtils.adicionarErroSemantico(
+                    ctx.start, f"{nomeMob} mob não encontrado"
+                )
 
         super().visitMob(ctx)
 

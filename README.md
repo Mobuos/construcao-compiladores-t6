@@ -57,8 +57,7 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
 
   // Exemplos de modificadores possíveis p/ itens
   encantamento = {encantamento: "unbreaking", 2 + "power", 3}
-  exibicao = {nome: "String", #0000FF + "outraString", #FF0000}
-  exibicao_lore = {lore: "String", #0000FF + "outraString", #FF0000}
+  exibicao = {nome: "String", #0000FF + "outraString", #FF0000 lore: "String", #0000FF + "outraString", #FF0000}
 
   // Dá determinado item para um player.
   // Modificadores disponíveis: Display, Enchantments, Unbreakable
