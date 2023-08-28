@@ -49,7 +49,7 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
   # COMANDO ATRIBUIÇÃO
     # Uma variável pode ser:
       # Uma coordenada
-      {nomeVar} = ( 10, ~, ~20);
+      {nomeVar} = ( 10, ~, ~20.5);
       # Uma string
       {nomeVar} = "STRING";
       # Um modificador de item
@@ -125,7 +125,7 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         {<modificador>} = varModMob => { <modificador_mob> }
 
   # COMANDO DAR ITEM
-    dar_item: {item}, 10, {<modificador>} -> {player};
+    dar_item: {item}, {qtd}, {<modificador>} -> {player};
 
       # OBS: O player é opcional, caso não utilizado, o item será dado ao próprio player.
       # OBS: O modificador é opcional e pode ser mais do que um, apenas adicionar mais modificadores sem nenhum separador entre eles, por exemplo: {<modificador1>} {<modificador2>} ...
@@ -148,6 +148,14 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         {player} = "nome player"
         # Uma variável que seja string
         {player} = varPlayer => "nome player"
+
+      # E a quantidade pode ser:
+          # Um número inteiro
+          {qtd} = 10
+          # Um número real
+          {qtd} = 12.5
+          # Uma variável que seja um número inteiro, ou um número real
+          {qtd} = varQtd => (10 || 12.5)
 
   # MODIFICADOR DE MOB
     # Os modificadores de mobs possíveis são:
@@ -176,9 +184,15 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
       invulneravel
 
       # Modificador de vida com número inteiro
-      vida: 10
-      # Modificador de vida com número real
-      vida: 12.5
+      vida: {vida}
+
+        # Sendo que vida pode ser:
+          # Um número inteiro
+          {vida} = 10
+          # Um número real
+          {vida} = 12.5
+          # Uma variável que seja um número inteiro, ou um número real
+          {vida} = varVida => (10 || 12.5)
 
   # MODIFICADOR DE ITEM
     # Os modificadores de itens possíveis são:
