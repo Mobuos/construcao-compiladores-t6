@@ -95,3 +95,5 @@ ou para rodar testes específicos (e.g apenas de tp, erro, give, etc.)
 ```bash
   pytest -k 'tp'
 ```
+
+Os testes puxam do arquivo test_mine.py
