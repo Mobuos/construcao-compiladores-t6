@@ -78,7 +78,7 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         # Uma coordenada
         {destino} = ( ~, 64, ~20)
         # Uma variável que seja string ou coordenada
-        {destino} = varDestino => ( ~, 64, ~20) || "nome usuario"
+        {destino} = varDestino => (( ~, 64, ~20) || "nome usuario")
 
   # COMANDO CONQUISTA
     # Dar uma conquista.
@@ -104,7 +104,10 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
     criar_mob: {mob}, {coordenada}, {<modificador>};
 
       # OBS: A coordenada é opcional, caso não utilizada, o mob será criado na localização atual do player.
-      # OBS: O modificador é opcional e pode ser mais do que um, apenas adicionar mais modificadores sem nenhum separador entre eles, por exemplo: {<modificador1>} {<modificador2>} ...
+
+      # OBS: O modificador é opcional e pode ser mais do que um,
+      # apenas adicionar mais modificadores sem nenhum separador entre eles,
+      # por exemplo: {<modificador1>} {<modificador2>} ...
 
       # Sendo que mob pode ser:
         # Uma string
@@ -125,10 +128,14 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         {<modificador>} = varModMob => { <modificador_mob> }
 
   # COMANDO DAR ITEM
-    dar_item: {item}, {qtd}, {<modificador>} -> {player};
+    dar_item: {item}, 10, {<modificador>} -> {player};
 
       # OBS: O player é opcional, caso não utilizado, o item será dado ao próprio player.
-      # OBS: O modificador é opcional e pode ser mais do que um, apenas adicionar mais modificadores sem nenhum separador entre eles, por exemplo: {<modificador1>} {<modificador2>} ...
+
+      # OBS: O modificador é opcional e pode ser mais do que um,
+      # apenas adicionar mais modificadores sem nenhum separador entre eles,
+      # por exemplo: {<modificador1>} {<modificador2>} ...
+
       # OBS: A quantidade é opcional, caso não utilizada, será dado apenas uma unidade do item.
 
       # Sendo que item pode ser:
@@ -148,14 +155,6 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         {player} = "nome player"
         # Uma variável que seja string
         {player} = varPlayer => "nome player"
-
-      # E a quantidade pode ser:
-          # Um número inteiro
-          {qtd} = 10
-          # Um número real
-          {qtd} = 12.5
-          # Uma variável que seja um número inteiro, ou um número real
-          {qtd} = varQtd => (10 || 12.5)
 
   # MODIFICADOR DE MOB
     # Os modificadores de mobs possíveis são:
@@ -191,8 +190,6 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
           {vida} = 10
           # Um número real
           {vida} = 12.5
-          # Uma variável que seja um número inteiro, ou um número real
-          {vida} = varVida => (10 || 12.5)
 
   # MODIFICADOR DE ITEM
     # Os modificadores de itens possíveis são:
@@ -203,8 +200,12 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
       # Modificador de nome e descrição do item
       nome: {nome}, {cor} lore: {descricao}, {cor}
 
-        # OBS: O nome é opcional e pode ser utilizado mais do que um, apenas adicionar mais nomes separados por um "+" entre eles, por exemplo: {nome1}, {cor1} + {nome2} + ...
-        # OBS: A lore é opcional e pode ser utilizado mais do que um, apenas adicionar mais lores separadas por um "+" entre elas, por exemplo: {lore1}, {cor1} + {lore2} + ...
+        # OBS: O nome é opcional e pode ser utilizado mais do que um,
+        # apenas adicionar mais nomes separados por um "+" entre eles, por exemplo: {nome1}, {cor1} + {nome2} + ...
+
+        # OBS: A lore é opcional e pode ser utilizado mais do que um,
+        # apenas adicionar mais lores separadas por um "+" entre elas, por exemplo: {lore1}, {cor1} + {lore2} + ...
+
         # OBS: A cor é opcional, mas deve ser sempre acompanhada por {nome} ou {lore}.
 
         # Sendo que nome pode ser:
@@ -226,21 +227,17 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
           {cor} = varCor => #FF00FF
 
       # Modificador de encantamento do item
-      encantamento: {encantamento}, {lvl}
+      encantamento: {encantamento}, 10
 
-        # OBS: É possível atribuir mais de um encantamento no item, apenas adicionar mais encantamentos separados por um "+" entre eles, por exemplo: {encantamento1}, {lvl1} + {encantamento2}, {lvl} + ...
+        # OBS: É possível atribuir mais de um encantamento no item,
+        # apenas adicionar mais encantamentos separados por um "+" entre eles,
+        # por exemplo: {encantamento1}, 10 + {encantamento2}, 25 + ...
 
         # Sendo que o encantamento pode ser:
           # Uma string
           {encantamento} = "nomeEncantamento"
           # Uma variável que é uma string
           {encantamento} = varNomeEncantamento => "nomeEncantamento"
-
-        # E o lvl pode ser:
-          # Um número inteiro
-          {lvl} = 10
-          # Uma variável que é um número inteiro
-          {lvl} = varLvl => 10
 
 ```
 
