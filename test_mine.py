@@ -29,7 +29,7 @@ def InEsp(input, esperado):
     # Remove a primeira linha do retorno
     obtido = run_main("aux.in")
     if "Linha" not in obtido:
-        obtido = "".join(obtido.split("\n")[1:])
+        obtido = "\n".join(obtido.split("\n")[1:])
 
     resultado = esperado == obtido
 
@@ -142,13 +142,19 @@ def test_erro_string_n_fechada():
 
 def test_give_normal():
     input = 'dar_item: "Ender Pearl";'
-    esperado = "/give @s minecraft:ender_pearl"
+    esperado = "/give @s ender_pearl"
+    assert InEsp(input, esperado)
+
+
+def test_give_enchantment():
+    input = """dar_item: "Ender Pearl", {encantamento: "unbreaking", 2 + "power", 3};"""
+    esperado = """/give @s ender_pearl{Enchantments:[{id:"unbreaking",lvl:2},{id:"power",lvl:3}]}"""
     assert InEsp(input, esperado)
 
 
 def test_give_target():
     input = """dar_item: "Ender Pearl" -> "Mobuos";"""
-    esperado = """/give Mobuos minecraft:ender_pearl"""
+    esperado = """/give Mobuos ender_pearl"""
     assert InEsp(input, esperado)
 
 
@@ -158,77 +164,114 @@ def test_give_var_target():
 
     dar_item: "Eye of Ender" -> dini;
     """
-    esperado = "/give dini minecraft:ender_eye"
+    esperado = "/give Mobuos ender_eye"
     assert InEsp(input, esperado)
 
 
 def test_give_qtd():
     input = 'dar_item: "Ender Pearl", 12;'
-    esperado = "/give dini minecraft:ender_pearl 12"
+    esperado = "/give @s ender_pearl 12"
     assert InEsp(input, esperado)
 
 
 def test_give_name():
     input = 'dar_item: "Ender Pearl", {nome: "Circulo"};'
-    esperado = (
-        """/give @s minecraft:ender_pearl{display:{Name:'[{"text":"Circulo"}]'}}"""
-    )
+    esperado = """/give @s ender_pearl{display:{Name:'[{"text":"Circulo"}]'}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_name_color():
     input = 'dar_item: "Ender Pearl", {nome: "Circulo", #FF0000};'
-    esperado = """/give @s minecraft:ender_pearl{display:{Name:'[{"text":"Circulo","color":"#FF0000"}]'}}"""
+    esperado = """/give @s ender_pearl{display:{Name:'[{"text":"Circulo","color":"#FF0000"}]'}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_lore():
     input = """dar_item: "Netherite Sword", {lore: "super espada"};"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Lore:['{"text":"super espada"}']}}"""
+    esperado = (
+        """/give @s netherite_sword{display:{Lore:['{"text":"super espada"}']}}"""
+    )
     assert InEsp(input, esperado)
 
 
 def test_give_lore_color():
     input = """dar_item: "Netherite Sword", {lore: "super espada", #0000FF};"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Lore:['{"text":"super espada","color":"#0000FF"}']}}"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada","color":"#0000FF"}']}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_multiple_lore():
-    input = """dar_item: "Netherite Sword", {lore: "super espada"} {lore: "espada bacana"};"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Lore:['{"text":"super espada"}','{"text":"espada bacana"}']}}"""
+    input = """dar_item: "Netherite Sword", {lore: "super espada" + "espada bacana"};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada"}','{"text":"espada bacana"}']}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_multiple_lore_color():
-    input = """dar_item: "Netherite Sword", {lore: "super espada", #FF0000} {lore: "espada bacana", #00FF00};"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana","color":"#00FF00"}']}}"""
+    input = """dar_item: "Netherite Sword", {lore: "super espada", #FF0000 + "espada bacana", #00FF00};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana","color":"#00FF00"}']}}"""
+    assert InEsp(input, esperado)
+
+
+def test_give_multiple_lore_color_2():
+    input = """dar_item: "Netherite Sword", {lore: "super espada" + "espada bacana", #00FF00};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada"}','{"text":"espada bacana","color":"#00FF00"}']}}"""
+    assert InEsp(input, esperado)
+
+
+def test_give_multiple_lore_color_3():
+    input = """dar_item: "Netherite Sword", {lore: "super espada", #FF0000 + "espada bacana"};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana"}']}}"""
+    assert InEsp(input, esperado)
+
+
+def test_give_multiple_lore_color_4():
+    input = """dar_item: "Netherite Sword", {lore: "super espada", #FF0000 + 
+                                            "espada bacana", #00FF00 + 
+                                            "yes", #0000FF};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana","color":"#00FF00"}','{"text":"yes","color":"#0000FF"}']}}"""
+    assert InEsp(input, esperado)
+
+
+def test_give_multiple_lore_color_5():
+    input = """dar_item: "Netherite Sword", {lore: "super espada" + 
+                                            "espada bacana", #00FF00 + 
+                                            "yes"};"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada"}','{"text":"espada bacana","color":"#00FF00"}','{"text":"yes"}']}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_var_multiple_lore_color():
     input = """
-    super = {lore: "super espada", #FF0000};
-    bacana = {lore: "espada bacana", #00FF00};
+    super = {lore: "super espada", #FF0000 + "espada bacana", #00FF00};
     ns = "Netherite Sword";
-    dar_item: ns, super bacana;"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana","color":"#00FF00"}']}}"""
+    dar_item: ns, super;"""
+    esperado = """/give @s netherite_sword{display:{Lore:['{"text":"super espada","color":"#FF0000"}','{"text":"espada bacana","color":"#00FF00"}']}}"""
     assert InEsp(input, esperado)
 
 
 def test_give_name_lore_color():
-    input = """dar_item: "Netherite Sword", {nome: "Espadinha", #FF0000 } {lore: "super espada", #0000FF};"""
-    esperado = """/give @s minecraft:netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#0000FF"}']}}"""
+    input = """dar_item: "Netherite Sword", {nome: "Espadinha", #FF0000 lore: "super espada", #0000FF};"""
+    esperado = """/give @s netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#0000FF"}']}}"""
     assert InEsp(input, esperado)
 
 
-def test_give_name_lore_color():
+def test_give_var_name_lore_color():
     input = """
     vermelho = #FF0000;
-    espadinha = {nome: "Espadinha", #FF0000};
-    dar_item: "Netherite Sword", espadinha {lore: "super espada", #FF0000};
+    dar_item: "Netherite Sword", {nome: "Espadinha", #FF0000 lore: "super espada", #FF0000};
     """
-    esperado = """/give @s minecraft:netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#FF0000"}']}}"""
+    esperado = """/give @s netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#FF0000"}']}}"""
+    assert InEsp(input, esperado)
+
+
+def test_give_var_name_lore_color_enchantment():
+    input = """
+    vermelho = #FF0000;
+    espadinha = {nome: "Espadinha", vermelho lore: "super espada", vermelho};
+    enc = {encantamento: "unbreaking", 2 + "power", 3};
+    dar_item: "Netherite Sword", espadinha enc;
+    """
+    esperado = """/give @s netherite_sword{display:{Name:'[{"text":"Espadinha","color":"#FF0000"}]',Lore:['{"text":"super espada","color":"#FF0000"}']},Enchantments:[{id:"unbreaking",lvl:2},{id:"power",lvl:3}]}"""
     assert InEsp(input, esperado)
 
 
@@ -289,7 +332,7 @@ def test_achievement_grant_everything():
 
 def test_achievement_grant_var_everything():
     input = """
-    tudo = "everything"
+    tudo = "everything";
     conquista: tudo -> "Mobuos";"""
     esperado = """/advancement grant Mobuos everything """
     assert InEsp(input, esperado)
@@ -320,31 +363,31 @@ def test_summon_var_coord():
 
 def test_summon_coord_health():
     input = """criar_mob: "creeper", (~10, ~10, ~10), {vida: 100};"""
-    esperado = """/summon minecraft:creeper ~10 ~10 ~10 {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f}"""
+    esperado = """/summon creeper ~10 ~10 ~10 {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f}"""
     assert InEsp(input, esperado)
 
 
 def test_summon_coord_name():
     input = """criar_mob: "cow", (~, ~, ~), {nome_mob: "Betsy"};"""
-    esperado = """/summon cow ~ ~ ~ {CustomName:"\"Betsy\""}"""
-    assert False
+    esperado = """/summon cow ~ ~ ~ {CustomName:'{\"text\":\"Betsy\"}'}"""
+    assert InEsp(input, esperado)
 
 
 def test_summon_coord_noAI():
     input = """criar_mob: "creeper", (~, ~, ~), {semIA};"""
-    esperado = """/summon minecraft:creeper ~ ~ ~ {NoAI:1}"""
+    esperado = """/summon creeper ~ ~ ~ {NoAI:1}"""
     assert InEsp(input, esperado)
 
 
 def test_summon_coord_invulnerable():
     input = """criar_mob: "creeper", (~, ~, ~), {invulneravel};"""
-    esperado = """/summon minecraft:creeper ~ ~ ~ {Invulnerable:1}"""
+    esperado = """/summon creeper ~ ~ ~ {Invulnerable:1}"""
     assert InEsp(input, esperado)
 
 
 def test_summon_coord_health_noAI():
     input = """criar_mob: "creeper", (~, ~, ~), {vida: 100} {semIA};"""
-    esperado = """/summon minecraft:creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1}"""
+    esperado = """/summon creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1}"""
     assert InEsp(input, esperado)
 
 
@@ -352,7 +395,22 @@ def test_summon_coord_health_noAI_name():
     input = (
         """criar_mob: "creeper", (~, ~, ~), {vida: 100} {semIA} {nome_mob: "boom"};"""
     )
-    esperado = """/summon minecraft:creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:"\"boom\""}"""
+    esperado = """/summon creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:'{"text":"boom"}'}"""
+    assert InEsp(input, esperado)
+
+
+def test_summon_coord_health_noAI_name_color():
+    input = """criar_mob: "creeper", (~, ~, ~), {vida: 100} {semIA} {nome_mob: "boom", #FF0000};"""
+    esperado = """/summon creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:'{"text":"boom","color":"#FF0000"}'}"""
+    assert InEsp(input, esperado)
+
+
+def test_summon_coord_health_noAI_name_color_multiline():
+    input = """criar_mob: "creeper", (~, ~, ~), 
+                          {vida: 100} 
+                          {semIA} 
+                          {nome_mob: "boom", #FF0000};"""
+    esperado = """/summon creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:'{"text":"boom","color":"#FF0000"}'}"""
     assert InEsp(input, esperado)
 
 
@@ -363,5 +421,13 @@ def test_summon_var_coord_health_noAI_name():
     boom = {nome_mob: "boom"};
     criar_mob: "creeper", aqui, cem {semIA} boom;
     """
-    esperado = """/summon minecraft:creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:"\"boom\""}"""
+    esperado = """/summon creeper ~ ~ ~ {Attributes:[{Name:"generic.max_health",Base:100f}],Health:100f,NoAI:1,CustomName:'{"text":"boom"}'}"""
+    assert InEsp(input, esperado)
+
+
+def test_super():
+    input = """
+    """
+    esperado = """
+    """
     assert InEsp(input, esperado)

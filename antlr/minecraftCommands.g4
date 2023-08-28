@@ -30,10 +30,13 @@ TELEPORTE: 'teleporte' | 'tp';
 ENCANTAR: 'encantar';
 CRIAR_MOB: 'criar_mob';
 CONQUISTA: 'conquista';
+NOME: 'nome';
+LORE: 'lore';
 
 ALVO: '->';
 ATRIBUICAO: '=';
 NEGACAO: '-';
+ADICAO: '+';
 SEPARADOR_COMANDO: ':';
 VIRGULA: ',';
 FIM_COMANDO: ';';
@@ -53,13 +56,16 @@ origem_tp: STRING | IDENT;
 destino_tp: STRING | coordenadas | IDENT;
 player: STRING | IDENT;
 item: STRING | IDENT;
-mod: modificadores_item | modificadores_mob | IDENT;
+mod: modificador_item | modificador_mob | IDENT;
 encantamento_var: STRING | IDENT;
 mob: STRING | IDENT;
 coordenada_var: coordenadas | IDENT;
 conquista_var: STRING | IDENT;
 texto: STRING | IDENT;
 cor: COR_HEX | IDENT;
+exibicao_var: texto (',' cor)?;
+lore_mod_item: (LORE ':' exibicao_var (ADICAO exibicao_var)*);
+nome_mod_item: (NOME ':' exibicao_var (ADICAO exibicao_var)*);
 
 programa: (cmd';')*;
 cmd
@@ -73,15 +79,17 @@ cmd_dar_item: DAR_ITEM ':' item (',' NUM_INT)? (',' mod*)? ('->' player)?;
 cmd_teleporte: TELEPORTE ':' (origem_tp '->')? destino_tp;
 cmd_criar_mob: CRIAR_MOB ':' mob (',' coordenada_var)? (',' mod*)?;
 cmd_conquista: CONQUISTA ':' '-'? conquista_var ('->' player)?;
-cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificadores_item | modificadores_mob | COR_HEX);
+cmd_atribuicao: IDENT '=' (coordenadas | STRING | modificador_item | modificador_mob | COR_HEX);
 
 // Modificador par encantamento, tendo a seguinte estrutura: 'encantamentos: [ ("Nome encantamento", nivel encantamento), ...]. 
 mod_encantamento
-    : 'encantamento' ':' encantamento_var ',' NUM_INT ('+' encantamento_var ',' NUM_INT )*;
+    : 'encantamento' ':' encantamento_var ',' NUM_INT (ADICAO encantamento_var ',' NUM_INT )*;
 
 // Modificador de exibição, estrutura: 'nome: "Item mágico", #0000FF' ou 'lore: "Incrível item\n Feito por Votor", #0000FF'
 mod_exibicao
-    : ('nome' | 'lore') ':' texto (',' cor)? ('+' texto (',' cor)?)*;
+    : nome_mod_item?
+    lore_mod_item?
+    ;
 
 // Modificador, indica que o item é inquebrável
 mod_inquebravel
@@ -104,18 +112,24 @@ mod_vida
     : 'vida' ':' (NUM_REAL | NUM_INT);
 
 // Modificadores compatíveis com mobs
-modificadores_mob: '{' modificador_mob '}';
 modificador_mob
-    : mod_nome_mob
-    | mod_semIA
-    | mod_vida
-    | mod_invulneravel
+    : '{' 
+    (
+        mod_nome_mob
+        | mod_semIA
+        | mod_vida
+        | mod_invulneravel
+    )
+    '}'
     ;
 
 // Modificadores compatíveis com itens
-modificadores_item: '{' modificador_item '}';
 modificador_item
-    : mod_encantamento
-    | mod_exibicao
-    | mod_inquebravel
+    : '{'
+    (
+        mod_encantamento
+        | mod_exibicao
+        | mod_inquebravel
+    )
+    '}'
     ;

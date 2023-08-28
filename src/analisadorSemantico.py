@@ -27,14 +27,14 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
             if ctx.STRING() != None:
                 self.tabela.adicionar(nomeVar, Tipo.STRING, ctx.STRING().getText())
 
-            if ctx.modificadores_item() != None:
+            if ctx.modificador_item() != None:
                 self.tabela.adicionar(
-                    nomeVar, Tipo.MOD_ITEM, ctx.modificadores_item().getText()
+                    nomeVar, Tipo.MOD_ITEM, ctx.modificador_item().getText()
                 )
 
-            if ctx.modificadores_mob() != None:
+            if ctx.modificador_mob() != None:
                 self.tabela.adicionar(
-                    nomeVar, Tipo.MOD_MOB, ctx.modificadores_mob().getText()
+                    nomeVar, Tipo.MOD_MOB, ctx.modificador_mob().getText()
                 )
 
             if ctx.COR_HEX() != None:
@@ -74,7 +74,7 @@ class AnalisadorSemantico(minecraftCommandsVisitor):
         tipoMod = Tipo.MOD_ITEM
         msgErro = "incompatibilidade de modificadores"
 
-        if ctx.modificadores_mob() != None:
+        if ctx.modificador_mob() != None:
             tipoMod = Tipo.MOD_MOB
 
         if ctx.IDENT() != None:

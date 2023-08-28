@@ -125,6 +125,33 @@ class minecraftCommandsListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by minecraftCommandsParser#exibicao_var.
+    def enterExibicao_var(self, ctx:minecraftCommandsParser.Exibicao_varContext):
+        pass
+
+    # Exit a parse tree produced by minecraftCommandsParser#exibicao_var.
+    def exitExibicao_var(self, ctx:minecraftCommandsParser.Exibicao_varContext):
+        pass
+
+
+    # Enter a parse tree produced by minecraftCommandsParser#lore_mod_item.
+    def enterLore_mod_item(self, ctx:minecraftCommandsParser.Lore_mod_itemContext):
+        pass
+
+    # Exit a parse tree produced by minecraftCommandsParser#lore_mod_item.
+    def exitLore_mod_item(self, ctx:minecraftCommandsParser.Lore_mod_itemContext):
+        pass
+
+
+    # Enter a parse tree produced by minecraftCommandsParser#nome_mod_item.
+    def enterNome_mod_item(self, ctx:minecraftCommandsParser.Nome_mod_itemContext):
+        pass
+
+    # Exit a parse tree produced by minecraftCommandsParser#nome_mod_item.
+    def exitNome_mod_item(self, ctx:minecraftCommandsParser.Nome_mod_itemContext):
+        pass
+
+
     # Enter a parse tree produced by minecraftCommandsParser#programa.
     def enterPrograma(self, ctx:minecraftCommandsParser.ProgramaContext):
         pass
@@ -251,30 +278,12 @@ class minecraftCommandsListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by minecraftCommandsParser#modificadores_mob.
-    def enterModificadores_mob(self, ctx:minecraftCommandsParser.Modificadores_mobContext):
-        pass
-
-    # Exit a parse tree produced by minecraftCommandsParser#modificadores_mob.
-    def exitModificadores_mob(self, ctx:minecraftCommandsParser.Modificadores_mobContext):
-        pass
-
-
     # Enter a parse tree produced by minecraftCommandsParser#modificador_mob.
     def enterModificador_mob(self, ctx:minecraftCommandsParser.Modificador_mobContext):
         pass
 
     # Exit a parse tree produced by minecraftCommandsParser#modificador_mob.
     def exitModificador_mob(self, ctx:minecraftCommandsParser.Modificador_mobContext):
-        pass
-
-
-    # Enter a parse tree produced by minecraftCommandsParser#modificadores_item.
-    def enterModificadores_item(self, ctx:minecraftCommandsParser.Modificadores_itemContext):
-        pass
-
-    # Exit a parse tree produced by minecraftCommandsParser#modificadores_item.
-    def exitModificadores_item(self, ctx:minecraftCommandsParser.Modificadores_itemContext):
         pass
 
 
