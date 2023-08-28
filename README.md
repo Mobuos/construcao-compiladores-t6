@@ -78,7 +78,7 @@ Para execução do programa é necessário um arquivo de entrada, que conterá i
         # Uma coordenada
         {destino} = ( ~, 64, ~20)
         # Uma variável que seja string ou coordenada
-        {destino} = varDestino => (( ~, 64, ~20) ou "nome usuario")
+        {destino} = varDestino => ( ( ~, 64, ~20) || "nome usuario")
 
   # COMANDO CONQUISTA
     # Dar uma conquista.
