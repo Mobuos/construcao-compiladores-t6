@@ -1,10 +1,8 @@
-```bash
-antlr4 -Dlanguage=Python3 antlr/hello.g4
-```
-
 # Gerador de comandos de Minecraft
 
 Sexto trabalho da disciplina de Construção de Compiladores, lecionada pelo professor Daniel Lucrédio.
+
+[Video de apresentação da ferramenta](https://youtu.be/Ys1jM_UBntI)
 
 <h3 align="center">
   Feito por:
